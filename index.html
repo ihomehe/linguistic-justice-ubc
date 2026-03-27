@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Linguistic Justice at UBC">
+<meta property="og:description" content="Nearly 2 in 3 UBC students navigate academic life in a language that isn't their first. This project documents those experiences and works toward a campus where every voice is heard.">
+<meta property="og:image" content="https://linguisticjustice.ubc.ca/og-image.png">
+<meta property="og:url" content="https://linguisticjustice.ubc.ca">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Linguistic Justice at UBC">
+<meta name="twitter:description" content="Nearly 2 in 3 UBC students navigate academic life in a language that isn't their first.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23002145'/><text x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='14' font-weight='700' fill='%23DEBA5E'>UBC</text></svg>">
+<title>Linguistic Justice at UBC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ubc-blue: #002145;
+  --ubc-blue-mid: #0055B7;
+  --ubc-blue-light: #40A5C8;
+  --ubc-gold: #97731B;
+  --ubc-gold-light: #DEBA5E;
+  --white: #FFFFFF;
+  --off-white: #F5F5F0;
+  --light-gray: #E8E8E3;
+  --mid-gray: #767676;
+  --dark-gray: #3D3D3D;
+  --text: #1A1A1A;
+  --serif: 'Frank Ruhl Libre', Georgia, serif;
+  --sans: 'Source Sans 3', sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); color: var(--text); background: var(--white); font-size: 17px; line-height: 1.7; }
+
+/* ─── MUSQUEAM BANNER ─── */
+.land-banner {
+  background: #1a1a1a;
+  color: rgba(255,255,255,0.65);
+  font-size: 12px;
+  text-align: center;
+  padding: 8px 2rem;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+.land-banner span { color: rgba(255,255,255,0.35); margin: 0 6px; }
+
+/* ─── NAV ─── */
+nav {
+  position: sticky;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: var(--ubc-blue);
+  border-bottom: 3px solid var(--ubc-gold);
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between; height: 62px;
+}
+.nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+.nav-logo-badge { background: var(--ubc-gold); color: var(--ubc-blue); font-family: var(--serif); font-weight: 700; font-size: 13px; padding: 4px 9px; letter-spacing: 0.05em; }
+.nav-logo-text { color: var(--white); font-family: var(--sans); font-weight: 300; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; }
+.nav-links { display: flex; list-style: none; gap: 0.25rem; }
+.nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 13px; font-weight: 400; padding: 6px 12px; letter-spacing: 0.03em; transition: color 0.2s, background 0.2s; border-radius: 2px; }
+.nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.1); }
+.nav-cta { background: var(--ubc-gold) !important; color: var(--ubc-blue) !important; font-weight: 600 !important; }
+.nav-cta:hover { opacity: 0.9; background: var(--ubc-gold) !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: white; }
+.mobile-nav { display: none; flex-direction: column; background: var(--ubc-blue); border-top: 1px solid rgba(255,255,255,0.1); padding: 1rem 2rem; }
+.mobile-nav.open { display: flex; }
+.mobile-nav a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08); display: block; }
+
+/* ─── HERO ─── */
+#home {
+  min-height: calc(100vh - 96px);
+  background: var(--ubc-blue);
+  display: flex; align-items: center;
+  position: relative; overflow: hidden;
+}
+.hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 60px 60px; }
+.hero-accent { position: absolute; top: 0; right: 0; width: 480px; height: 480px; background: radial-gradient(circle at top right, rgba(0,85,183,0.4) 0%, transparent 70%); pointer-events: none; }
+.hero-inner { position: relative; max-width: 1200px; margin: 0 auto; padding: 5rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.hero-eyebrow { display: inline-block; color: var(--ubc-gold-light); font-size: 12px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; border-bottom: 1px solid var(--ubc-gold); padding-bottom: 0.5rem; }
+.hero-title { font-family: var(--serif); font-size: clamp(2.6rem, 5vw, 4.2rem); font-weight: 400; color: var(--white); line-height: 1.15; margin-bottom: 1.5rem; letter-spacing: -0.01em; }
+.hero-title em { font-style: italic; color: var(--ubc-gold-light); }
+.hero-body { color: rgba(255,255,255,0.75); font-size: 1.1rem; font-weight: 300; margin-bottom: 2.5rem; max-width: 520px; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary { background: var(--ubc-gold); color: var(--ubc-blue); font-family: var(--sans); font-size: 14px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 14px 28px; text-decoration: none; transition: opacity 0.2s, transform 0.2s; display: inline-block; }
+.btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+.btn-ghost { border: 1px solid rgba(255,255,255,0.4); color: rgba(255,255,255,0.85); font-family: var(--sans); font-size: 14px; font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase; padding: 14px 28px; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+.btn-ghost:hover { border-color: white; color: white; }
+.hero-stat-panel { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-top: 3px solid var(--ubc-gold); padding: 2.5rem; }
+.hero-stat-panel h3 { color: var(--ubc-gold-light); font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 2rem; }
+.stat-row { border-bottom: 1px solid rgba(255,255,255,0.08); padding: 1.1rem 0; }
+.stat-row:last-child { border-bottom: none; }
+.stat-number { font-family: var(--serif); font-size: 2.4rem; font-weight: 400; color: var(--white); line-height: 1; margin-bottom: 0.3rem; }
+.stat-label { font-size: 13px; color: rgba(255,255,255,0.6); font-weight: 300; }
+
+/* ─── SHARED ─── */
+section { scroll-margin-top: 64px; }
+.section-inner { max-width: 1200px; margin: 0 auto; padding: 5rem 2rem; }
+.section-label { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ubc-gold); margin-bottom: 0.75rem; display: block; }
+.section-title { font-family: var(--serif); font-size: clamp(1.9rem, 3.5vw, 2.8rem); font-weight: 400; color: var(--ubc-blue); line-height: 1.2; margin-bottom: 1.25rem; }
+.section-intro { font-size: 1.1rem; color: var(--mid-gray); font-weight: 300; max-width: 680px; margin-bottom: 3rem; line-height: 1.8; }
+.divider { width: 48px; height: 3px; background: var(--ubc-gold); margin: 1.5rem 0; }
+
+/* ─── WHAT IS ─── */
+#what-is { background: var(--off-white); }
+.definition-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 3rem; }
+.definition-card { background: var(--white); padding: 2.5rem; border-top: 3px solid transparent; transition: border-color 0.2s; }
+.definition-card:hover { border-top-color: var(--ubc-blue-mid); }
+.definition-card h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 500; color: var(--ubc-blue); margin-bottom: 0.75rem; }
+.definition-card p { font-size: 0.95rem; color: var(--dark-gray); line-height: 1.75; }
+.definition-card .card-source { margin-top: 1.25rem; font-size: 12px; color: var(--mid-gray); font-style: italic; }
+.blockquote-feature { background: var(--ubc-blue); color: var(--white); padding: 3rem 3.5rem; position: relative; margin: 3rem 0; }
+.blockquote-feature::before { content: '\201C'; font-family: var(--serif); font-size: 8rem; color: var(--ubc-gold); opacity: 0.3; position: absolute; top: -1rem; left: 2rem; line-height: 1; }
+.blockquote-feature blockquote { font-family: var(--serif); font-size: 1.5rem; font-weight: 300; line-height: 1.55; font-style: italic; position: relative; }
+.blockquote-feature cite { display: block; margin-top: 1.25rem; font-family: var(--sans); font-size: 13px; font-style: normal; color: var(--ubc-gold-light); letter-spacing: 0.05em; }
+
+
+/* ─── GLOSSARY ─── */
+#glossary { background: var(--white); }
+.glossary-grid { display: flex; flex-direction: column; gap: 2px; }
+.glossary-item { border-left: 3px solid transparent; transition: border-color 0.2s; }
+.glossary-item.open { border-left-color: var(--ubc-blue); }
+.glossary-q {
+  width: 100%; display: flex; justify-content: space-between; align-items: center;
+  padding: 1.1rem 1.5rem; background: var(--off-white); border: none;
+  font-family: var(--sans); font-size: 16px; font-weight: 600; color: var(--ubc-blue);
+  cursor: pointer; text-align: left; transition: background 0.2s;
+}
+.glossary-q:hover { background: var(--light-gray); }
+.glossary-q svg { transition: transform 0.25s; flex-shrink: 0; }
+.glossary-item.open .glossary-q svg { transform: rotate(180deg); }
+.glossary-a {
+  display: none; padding: 1.25rem 1.5rem 1.5rem;
+  background: var(--white); border-top: 1px solid var(--light-gray);
+  font-size: 15px; color: var(--dark-gray); line-height: 1.8;
+}
+.glossary-item.open .glossary-a { display: block; }
+.gloss-source { margin-top: 1rem; font-size: 12px; color: var(--mid-gray); font-style: italic; }
+
+/* ─── DATA ─── */
+#data { background: var(--white); }
+.data-tabs { display: flex; border-bottom: 2px solid var(--light-gray); margin-bottom: 3rem; gap: 0; flex-wrap: wrap; }
+.data-tab { padding: 12px 24px; font-size: 12px; font-weight: 600; color: var(--mid-gray); cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: color 0.2s, border-color 0.2s; background: none; border-top: none; border-left: none; border-right: none; font-family: var(--sans); letter-spacing: 0.06em; text-transform: uppercase; }
+.data-tab.active { color: var(--ubc-blue); border-bottom-color: var(--ubc-blue); }
+.data-tab:hover:not(.active) { color: var(--ubc-blue-mid); }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 2rem; }
+.stat-card { background: var(--off-white); padding: 2rem 1.75rem; border-bottom: 3px solid transparent; }
+.stat-card.highlight { background: var(--ubc-blue); border-bottom-color: var(--ubc-gold); }
+.stat-card .big-num { font-family: var(--serif); font-size: 3rem; font-weight: 400; color: var(--ubc-blue); line-height: 1; margin-bottom: 0.5rem; }
+.stat-card.highlight .big-num { color: var(--white); }
+.stat-card .stat-desc { font-size: 14px; color: var(--dark-gray); line-height: 1.6; }
+.stat-card.highlight .stat-desc { color: rgba(255,255,255,0.7); }
+.stat-card .stat-source { font-size: 11px; color: var(--mid-gray); margin-top: 0.75rem; font-style: italic; }
+.stat-card.highlight .stat-source { color: rgba(255,255,255,0.4); }
+.data-note { background: var(--off-white); border-left: 4px solid var(--ubc-blue-light); padding: 1.25rem 1.5rem; font-size: 14px; color: var(--mid-gray); font-style: italic; margin-top: 1.5rem; }
+
+/* ─── DATA VISUALIZATIONS ─── */
+.viz-section { margin-top: 3.5rem; }
+.viz-section h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; color: var(--ubc-blue); margin-bottom: 0.5rem; }
+.viz-section .viz-sub { font-size: 13px; color: var(--mid-gray); margin-bottom: 2rem; font-style: italic; }
+.bar-chart { display: flex; flex-direction: column; gap: 14px; }
+.bar-row { display: grid; grid-template-columns: 220px 1fr 60px; align-items: center; gap: 1rem; }
+.bar-label { font-size: 13px; color: var(--dark-gray); text-align: right; line-height: 1.3; }
+.bar-track { background: var(--light-gray); height: 28px; position: relative; overflow: hidden; }
+.bar-fill { height: 100%; background: var(--ubc-blue); transition: width 1.2s cubic-bezier(0.4,0,0.2,1); width: 0; display: flex; align-items: center; justify-content: flex-end; padding-right: 8px; }
+.bar-fill.gold { background: var(--ubc-gold); }
+.bar-fill.light { background: var(--ubc-blue-light); }
+.bar-fill span { font-size: 11px; color: white; font-weight: 600; white-space: nowrap; }
+.bar-pct { font-family: var(--serif); font-size: 1.2rem; color: var(--ubc-blue); font-weight: 500; }
+
+.donut-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 1.5rem; }
+.donut-item { text-align: center; }
+.donut-wrap { position: relative; width: 100px; height: 100px; margin: 0 auto 1rem; }
+.donut-wrap svg { transform: rotate(-90deg); }
+.donut-center { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 1.4rem; color: var(--ubc-blue); font-weight: 500; }
+.donut-desc { font-size: 13px; color: var(--dark-gray); line-height: 1.5; }
+
+.lang-bubbles { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.5rem; align-items: flex-end; }
+.lang-bubble { background: var(--ubc-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 11px; font-weight: 600; line-height: 1.2; padding: 8px; transition: transform 0.2s; cursor: default; }
+.lang-bubble:hover { transform: scale(1.08); }
+.lang-bubble.gold { background: var(--ubc-gold); }
+.lang-bubble.light { background: var(--ubc-blue-light); color: var(--ubc-blue); }
+
+
+/* ─── TIMELINE ─── */
+#timeline { background: var(--off-white); }
+.timeline { position: relative; padding-left: 0; }
+.timeline::before {
+  content: ''; position: absolute; left: 110px; top: 0; bottom: 0;
+  width: 2px; background: var(--light-gray);
+}
+.timeline-item {
+  display: grid; grid-template-columns: 100px 1fr;
+  gap: 2rem; margin-bottom: 2px; position: relative;
+}
+.timeline-item::before {
+  content: ''; position: absolute; left: 108px; top: 1.4rem;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--ubc-blue); border: 2px solid var(--off-white);
+  z-index: 1;
+}
+.timeline-item.tl-dark::before { background: var(--ubc-gold); }
+.tl-year {
+  text-align: right; padding: 1.25rem 0; padding-top: 1.3rem;
+  font-family: var(--serif); font-size: 1rem; font-weight: 500;
+  color: var(--ubc-blue); line-height: 1.2;
+}
+.tl-content {
+  background: var(--white); padding: 1.25rem 1.5rem;
+  border-left: 3px solid transparent;
+  transition: border-color 0.2s;
+}
+.timeline-item:hover .tl-content { border-left-color: var(--ubc-blue-mid); }
+.timeline-item.tl-dark .tl-content { border-left-color: var(--ubc-gold); }
+.tl-content h4 { font-family: var(--serif); font-weight: 500; color: var(--ubc-blue); margin-bottom: 0.4rem; font-size: 1rem; }
+.tl-content p { font-size: 14px; color: var(--dark-gray); line-height: 1.75; }
+@media (max-width: 640px) {
+  .timeline::before { left: 70px; }
+  .timeline-item { grid-template-columns: 60px 1fr; gap: 1rem; }
+  .timeline-item::before { left: 68px; }
+  .tl-year { font-size: 12px; }
+}
+
+/* ─── STORIES ─── */
+#stories { background: var(--ubc-blue); }
+#stories .section-title { color: var(--white); }
+#stories .section-intro { color: rgba(255,255,255,0.65); }
+#stories .section-label { color: var(--ubc-gold-light); }
+.stories-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.story-card { background: rgba(255,255,255,0.05); border-top: 3px solid rgba(255,255,255,0.1); padding: 2rem; transition: background 0.25s, border-color 0.25s; }
+.story-card:hover { background: rgba(255,255,255,0.09); border-top-color: var(--ubc-gold); }
+.story-quote { font-family: var(--serif); font-style: italic; font-size: 1.05rem; color: rgba(255,255,255,0.88); line-height: 1.7; margin-bottom: 1.5rem; }
+.story-quote::before { content: '\201C'; color: var(--ubc-gold-light); font-size: 1.4em; }
+.story-quote::after { content: '\201D'; color: var(--ubc-gold-light); font-size: 1.4em; }
+.story-attr { font-size: 12px; color: rgba(255,255,255,0.45); font-weight: 400; text-transform: uppercase; letter-spacing: 0.08em; }
+.stories-note { margin-top: 2rem; font-size: 13px; color: rgba(255,255,255,0.35); font-style: italic; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
+
+/* ─── SHARE YOUR STORY ─── */
+#share { background: var(--off-white); }
+.share-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+.share-intro p { font-size: 0.97rem; color: var(--dark-gray); line-height: 1.85; margin-bottom: 1.25rem; }
+.share-intro .impact-note { background: var(--ubc-blue); color: white; padding: 1.5rem; border-left: 4px solid var(--ubc-gold); margin-top: 1.5rem; font-size: 14px; line-height: 1.7; }
+.share-intro .impact-note strong { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ubc-gold-light); margin-bottom: 0.5rem; }
+.share-form { background: var(--white); padding: 2.5rem; border-top: 3px solid var(--ubc-blue); }
+.share-form h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; color: var(--ubc-blue); margin-bottom: 0.5rem; }
+.share-form .form-note { font-size: 13px; color: var(--mid-gray); margin-bottom: 2rem; }
+.form-group { margin-bottom: 1.25rem; }
+.form-group label { display: block; font-size: 12px; font-weight: 600; color: var(--ubc-blue); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; padding: 10px 14px; border: 1px solid var(--light-gray); background: var(--off-white);
+  font-family: var(--sans); font-size: 14px; color: var(--text); outline: none;
+  transition: border-color 0.2s; resize: vertical;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--ubc-blue); background: white; }
+.form-group textarea { min-height: 110px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-privacy { font-size: 12px; color: var(--mid-gray); font-style: italic; margin-top: 1rem; }
+.btn-submit { background: var(--ubc-blue); color: white; border: none; padding: 14px 32px; font-family: var(--sans); font-size: 14px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; width: 100%; margin-top: 1.25rem; transition: background 0.2s; }
+.btn-submit:hover { background: var(--ubc-blue-mid); }
+.form-success { display: none; background: var(--ubc-blue); color: white; padding: 2rem; text-align: center; }
+.form-success h4 { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.5rem; }
+.form-success p { font-size: 14px; color: rgba(255,255,255,0.7); }
+
+/* ─── FILM ─── */
+#film { background: var(--white); }
+.film-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: start; }
+.film-embed { aspect-ratio: 16/9; background: var(--ubc-blue); position: relative; overflow: hidden; }
+.film-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; }
+.play-btn { width: 68px; height: 68px; background: var(--ubc-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.2s; }
+.play-btn:hover { transform: scale(1.08); }
+.play-btn svg { margin-left: 4px; }
+.film-embed-label { color: rgba(255,255,255,0.6); font-size: 13px; letter-spacing: 0.05em; }
+.film-info h3 { font-family: var(--serif); font-size: 1.6rem; font-weight: 400; color: var(--ubc-blue); margin-bottom: 0.5rem; }
+.film-meta { font-size: 12px; color: var(--ubc-gold); text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600; margin-bottom: 1.25rem; }
+.film-body { font-size: 0.97rem; color: var(--dark-gray); line-height: 1.8; margin-bottom: 1.5rem; }
+.film-credits { background: var(--off-white); border-left: 3px solid var(--ubc-blue-light); padding: 1rem 1.25rem; font-size: 13px; color: var(--mid-gray); margin-bottom: 1.5rem; }
+.film-credits strong { color: var(--ubc-blue); display: block; margin-bottom: 0.4rem; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; }
+.film-versions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.version-tag { background: var(--off-white); border: 1px solid var(--light-gray); padding: 6px 14px; font-size: 12px; color: var(--dark-gray); font-weight: 600; }
+
+/* ─── ABOUT ─── */
+#about { background: var(--off-white); }
+.about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+.about-body p { color: var(--dark-gray); font-size: 0.97rem; line-height: 1.85; margin-bottom: 1.25rem; }
+.team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 1rem; }
+.team-card { background: var(--white); padding: 1.5rem; border-top: 2px solid transparent; transition: border-color 0.2s; }
+.team-card:hover { border-top-color: var(--ubc-blue-mid); }
+.team-card .name { font-weight: 600; color: var(--ubc-blue); font-size: 15px; margin-bottom: 0.2rem; }
+.team-card .role { font-size: 12px; color: var(--mid-gray); line-height: 1.5; }
+.partner-list { margin-top: 2rem; }
+.partner-list h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ubc-gold); font-weight: 600; margin-bottom: 1rem; }
+.partners { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.partner-tag { background: var(--white); border: 1px solid var(--light-gray); font-size: 12px; color: var(--dark-gray); padding: 5px 12px; }
+
+/* ─── RESOURCES ─── */
+#resources { background: var(--white); }
+.resources-primary { background: var(--ubc-blue); padding: 3rem; margin-bottom: 3rem; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: center; }
+.resources-primary h3 { font-family: var(--serif); font-size: 1.6rem; font-weight: 400; color: var(--white); margin-bottom: 0.5rem; }
+.resources-primary p { color: rgba(255,255,255,0.65); font-size: 15px; max-width: 580px; }
+.resources-primary .btn-primary { white-space: nowrap; }
+.resources-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 3rem; }
+.resource-card { background: var(--off-white); padding: 2rem; border-bottom: 3px solid transparent; transition: border-color 0.2s; }
+.resource-card:hover { border-bottom-color: var(--ubc-blue-mid); }
+.resource-icon { width: 40px; height: 40px; background: var(--ubc-blue); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
+.resource-icon svg { fill: white; }
+.resource-card h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 500; color: var(--ubc-blue); margin-bottom: 0.6rem; }
+.resource-card p { font-size: 14px; color: var(--dark-gray); line-height: 1.7; margin-bottom: 1.25rem; }
+.resource-link { font-size: 13px; color: var(--ubc-blue-mid); text-decoration: none; font-weight: 600; letter-spacing: 0.03em; display: inline-flex; align-items: center; gap: 4px; }
+.resource-link::after { content: ' →'; }
+.resource-link:hover { color: var(--ubc-blue); }
+
+/* ─── INSTRUCTOR GUIDE ─── */
+.guide-banner { background: var(--off-white); border: 1px solid var(--light-gray); border-left: 4px solid var(--ubc-gold); padding: 2rem 2.5rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; margin-top: 3rem; }
+.guide-banner h4 { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; color: var(--ubc-blue); margin-bottom: 0.3rem; }
+.guide-banner p { font-size: 14px; color: var(--mid-gray); }
+.btn-download { background: var(--ubc-blue); color: white; padding: 12px 24px; font-size: 13px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: background 0.2s; white-space: nowrap; }
+.btn-download:hover { background: var(--ubc-blue-mid); }
+.btn-download svg { fill: white; flex-shrink: 0; }
+
+
+
+/* ─── IF YOU ARE EXPERIENCING ─── */
+#experiencing { background: var(--ubc-blue); }
+#experiencing .section-title { color: var(--white); }
+#experiencing .section-intro { color: rgba(255,255,255,0.7); }
+#experiencing .section-label { color: var(--ubc-gold-light); }
+#experiencing .divider { background: var(--ubc-gold); }
+.affirm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 3rem; }
+.affirm-card {
+  background: rgba(255,255,255,0.05);
+  border-top: 3px solid rgba(255,255,255,0.08);
+  padding: 2rem; transition: background 0.2s, border-color 0.2s;
+}
+.affirm-card:hover { background: rgba(255,255,255,0.09); border-top-color: var(--ubc-gold); }
+.affirm-card h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 500; color: var(--ubc-gold-light); margin-bottom: 0.75rem; }
+.affirm-card p { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.8; }
+.affirm-statement {
+  background: rgba(255,255,255,0.04);
+  border-left: 4px solid var(--ubc-gold);
+  padding: 2.5rem 3rem;
+  margin-bottom: 3rem;
+}
+.affirm-statement p {
+  font-family: var(--serif); font-size: 1.3rem; font-weight: 300;
+  color: rgba(255,255,255,0.9); line-height: 1.7; margin-bottom: 1rem;
+}
+.affirm-statement p:last-child { margin-bottom: 0; }
+.support-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+.support-link {
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.8); text-decoration: none; padding: 10px 20px;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.04em;
+  transition: background 0.2s, color 0.2s;
+}
+.support-link:hover { background: rgba(255,255,255,0.15); color: white; }
+
+/* ─── WHAT YOU CAN DO ─── */
+#you { background: var(--off-white); }
+.you-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; margin-bottom: 2rem; }
+.you-card {
+  background: var(--white); padding: 2rem;
+  border-top: 3px solid transparent; transition: border-color 0.2s;
+}
+.you-card:hover { border-top-color: var(--ubc-blue-mid); }
+.you-audience {
+  font-size: 11px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--ubc-gold); margin-bottom: 1rem;
+}
+.you-card h3 { font-family: var(--serif); font-size: 1rem; font-weight: 500; color: var(--ubc-blue); margin-bottom: 0.6rem; }
+.you-card p { font-size: 14px; color: var(--dark-gray); line-height: 1.75; }
+@media (max-width: 900px) {
+  .affirm-grid { grid-template-columns: 1fr; }
+  .you-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .you-grid { grid-template-columns: 1fr; }
+  .affirm-statement { padding: 1.5rem; }
+  .affirm-statement p { font-size: 1.1rem; }
+}
+
+/* ─── RECOMMENDATIONS ─── */
+#recommendations { background: var(--ubc-blue); }
+#recommendations .section-title { color: var(--white); }
+#recommendations .section-intro { color: rgba(255,255,255,0.65); }
+#recommendations .section-label { color: var(--ubc-gold-light); }
+#recommendations .divider { background: var(--ubc-gold); }
+.rec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 2rem; }
+.rec-card { background: rgba(255,255,255,0.05); padding: 2rem; border-top: 3px solid rgba(255,255,255,0.08); transition: background 0.2s, border-color 0.2s; }
+.rec-card:hover { background: rgba(255,255,255,0.09); border-top-color: var(--ubc-gold); }
+.rec-num { font-family: var(--serif); font-size: 2.5rem; font-weight: 300; color: var(--ubc-gold); line-height: 1; margin-bottom: 0.75rem; opacity: 0.6; }
+.rec-card h3 { font-family: var(--serif); font-size: 1.15rem; font-weight: 500; color: var(--white); margin-bottom: 0.75rem; }
+.rec-card p { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.75; margin-bottom: 1rem; }
+.rec-who { font-size: 11px; color: var(--ubc-gold-light); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+.rec-note { font-size: 13px; color: rgba(255,255,255,0.35); font-style: italic; text-align: center; padding: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); }
+@media (max-width: 760px) { .rec-grid { grid-template-columns: 1fr; } }
+
+
+/* ─── PRESS ─── */
+#press { background: var(--off-white); }
+.press-placeholder {
+  background: var(--white); border: 1px dashed var(--light-gray);
+  padding: 3rem; text-align: center; color: var(--mid-gray);
+  display: flex; flex-direction: column; align-items: center; gap: 0.75rem;
+}
+.press-icon { color: var(--light-gray); }
+.press-placeholder p { font-size: 15px; max-width: 480px; line-height: 1.7; }
+.press-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.press-card { background: var(--white); padding: 1.75rem; border-bottom: 3px solid transparent; transition: border-color 0.2s; }
+.press-card:hover { border-bottom-color: var(--ubc-blue-mid); }
+.press-outlet { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ubc-gold); margin-bottom: 0.4rem; }
+.press-headline { font-family: var(--serif); font-size: 1rem; font-weight: 500; color: var(--ubc-blue); margin-bottom: 0.5rem; line-height: 1.4; }
+.press-date { font-size: 12px; color: var(--mid-gray); }
+
+/* ─── FOOTER ─── */
+footer { background: #001228; color: rgba(255,255,255,0.5); padding: 3rem 2rem; font-size: 13px; }
+.footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 3rem; flex-wrap: wrap; }
+.footer-brand .logo-badge { background: var(--ubc-gold); color: var(--ubc-blue); font-family: var(--serif); font-weight: 700; font-size: 12px; padding: 3px 8px; display: inline-block; margin-bottom: 0.75rem; }
+.footer-brand p { font-size: 12px; max-width: 280px; line-height: 1.7; color: rgba(255,255,255,0.4); }
+.footer-brand .musqueam { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 0.75rem; font-style: italic; line-height: 1.6; }
+.footer-links h4 { color: rgba(255,255,255,0.7); font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.75rem; font-weight: 600; }
+.footer-links ul { list-style: none; }
+.footer-links li { margin-bottom: 0.4rem; }
+.footer-links a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+.footer-links a:hover { color: rgba(255,255,255,0.8); }
+.footer-bottom { max-width: 1200px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 12px; color: rgba(255,255,255,0.3); }
+.footer-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; }
+.footer-bottom a:hover { color: rgba(255,255,255,0.7); }
+
+/* ─── ANIMATIONS ─── */
+.fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 960px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-stat-panel { display: none; }
+  .definition-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .stories-grid { grid-template-columns: 1fr; }
+  .film-layout { grid-template-columns: 1fr; }
+  .about-layout { grid-template-columns: 1fr; }
+  .share-layout { grid-template-columns: 1fr; }
+  .resources-grid { grid-template-columns: 1fr 1fr; }
+  .resources-primary { grid-template-columns: 1fr; }
+  .donut-row { grid-template-columns: repeat(2, 1fr); }
+  .guide-banner { grid-template-columns: 1fr; }
+  .bar-row { grid-template-columns: 140px 1fr 50px; }
+  .bar-label { font-size: 12px; }
+}
+@media (max-width: 640px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  .resources-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; }
+  .form-row { grid-template-columns: 1fr; }
+  .donut-row { grid-template-columns: repeat(2, 1fr); }
+  .bar-row { grid-template-columns: 1fr; gap: 0.4rem; }
+  .bar-label { text-align: left; }
+  .bar-pct { display: none; }
+}
+
+
+.hero-translations {
+  display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem; margin-top: -0.5rem;
+}
+.translation {
+  font-size: 13px; color: rgba(255,255,255,0.4); font-style: italic;
+  border-right: 1px solid rgba(255,255,255,0.12); padding-right: 0.6rem;
+  cursor: default; transition: color 0.2s;
+  font-family: var(--sans);
+}
+.translation:hover { color: rgba(255,255,255,0.75); }
+.translation:last-child { border-right: none; }
+
+/* ─── PRINT ─── */
+@media print {
+  .land-banner, nav, .mobile-nav, .hamburger, .hero-actions, .btn-primary, .btn-ghost,
+  .btn-submit, .btn-download, .guide-banner .btn-download,
+  .resources-primary .btn-primary, footer { display: none !important; }
+  body { font-size: 13px; color: #000; }
+  #home { min-height: auto; background: white; color: black; page-break-after: always; }
+  .hero-title { color: #002145; font-size: 2rem; }
+  .hero-title em { color: #97731B; }
+  .hero-body { color: #333; }
+  .hero-stat-panel { display: block !important; background: #f5f5f0; border: 1px solid #ccc; }
+  .stat-number { color: #002145; }
+  .stat-label { color: #555; }
+  section { page-break-inside: avoid; }
+  .section-title { color: #002145; }
+  .stat-card.highlight { background: #002145; color: white; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .bar-fill { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .story-card { border: 1px solid #ccc; page-break-inside: avoid; background: #f9f9f9 !important; }
+  .stories-grid { grid-template-columns: 1fr 1fr; }
+  #stories { background: #f5f5f0 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  #stories .section-title { color: #002145; }
+  #stories .section-intro { color: #555; }
+  .blockquote-feature { background: #002145; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: 10px; color: #555; }
+  .nav-cta::after, .resource-link::after { display: none; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ─── MUSQUEAM BANNER ─── -->
+<div class="land-banner">
+  UBC is located on the traditional, ancestral, and unceded territory of the xʷməθkʷəy̓əm (Musqueam) people.
+  <span>|</span>
+  ʔi tə hiy̓ stəl̕əkʷ We are grateful to be here.
+</div>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <div class="nav-inner">
+    <a href="javascript:void(0)" onclick="scrollToSection('home')" class="nav-logo">
+      <span class="nav-logo-badge">UBC</span>
+      <span class="nav-logo-text">Linguistic Justice</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="javascript:void(0)" onclick="scrollToSection('what-is')">What Is It</a></li>
+      <li><a href="javascript:void(0)" onclick="scrollToSection('glossary')">Glossary</a></li>
+      <li><a href="javascript:void(0)" onclick="scrollToSection('data')">The Data</a></li>
+      <li><a href="javascript:void(0)" onclick="scrollToSection('timeline')">Timeline</a></li>
+      <li><a href="javascript:void(0)" onclick="scrollToSection('stories')">Stories</a></li>
+      <li><a href="javascript:void(0)" onclick="scrollToSection('film')">Watch</a></li>
+      <li><a href="javascript:void(0)" onclick="scrollToSection('about')">About</a></li>
+      <li><a href="javascript:void(0)" onclick="scrollToSection('share')">Share</a></li>
+      <li><a href="javascript:void(0)" onclick="scrollToSection('recommendations')" class="nav-cta">Take Action</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="javascript:void(0)" onclick="scrollToSection('what-is')" onclick="toggleMobileNav()">What Is Linguistic Justice?</a>
+    <a href="javascript:void(0)" onclick="scrollToSection('glossary')" onclick="toggleMobileNav()">Glossary</a>
+    <a href="javascript:void(0)" onclick="scrollToSection('data')" onclick="toggleMobileNav()">The Data</a>
+    <a href="javascript:void(0)" onclick="scrollToSection('timeline')" onclick="toggleMobileNav()">Timeline</a>
+    <a href="javascript:void(0)" onclick="scrollToSection('stories')" onclick="toggleMobileNav()">Student Voices</a>
+    <a href="javascript:void(0)" onclick="scrollToSection('film')" onclick="toggleMobileNav()">Watch</a>
+    <a href="javascript:void(0)" onclick="scrollToSection('about')" onclick="toggleMobileNav()">About the Project</a>
+    <a href="javascript:void(0)" onclick="scrollToSection('share')" onclick="toggleMobileNav()">Share Your Story</a>
+    <a href="javascript:void(0)" onclick="scrollToSection('recommendations')" onclick="toggleMobileNav()">What UBC Can Do</a>
+    <a href="javascript:void(0)" onclick="scrollToSection('resources')" onclick="toggleMobileNav()">Resources & Take Action</a>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-accent"></div>
+  <div class="hero-inner">
+    <div>
+      <span class="hero-eyebrow">UBC Faculty of Arts · Linguistic Justice Awareness Project</span>
+      <h1 class="hero-title">Your voice<br>belongs <em>here.</em></h1>
+      <div class="hero-translations">
+        <span class="translation" title="Mandarin Chinese">你的声音属于这里。</span>
+        <span class="translation" title="Punjabi">ਤੁਹਾਡੀ ਆਵਾਜ਼ ਇੱਥੇ ਹੈ।</span>
+        <span class="translation" title="French">Ta voix a sa place ici.</span>
+        <span class="translation" title="Spanish">Tu voz pertenece aquí.</span>
+        <span class="translation" title="Farsi / Persian">صدای شما اینجاست.</span>
+        <span class="translation" title="Tagalog">Ang iyong boses ay kabilang dito.</span>
+      </div>
+      <p class="hero-body">
+        Nearly 2 in 3 UBC students navigate academic life in a language that isn't their first.
+        Many face discrimination, self-silencing, and exclusion based on how they sound, not what they say.
+        This project documents those experiences and works toward a campus where every voice is heard.
+      </p>
+      <div class="hero-actions">
+        <a href="javascript:void(0)" onclick="scrollToSection('film')" class="btn-primary">Watch the Project</a>
+        <a href="javascript:void(0)" onclick="scrollToSection('share')" class="btn-ghost">Share Your Story</a>
+      </div>
+    </div>
+    <div class="hero-stat-panel fade-up">
+      <h3>Linguistic Justice at UBC By the Numbers</h3>
+      <div class="stat-row">
+        <div class="stat-number">~60%</div>
+        <div class="stat-label">of UBCV students speak more than one language at an academic level</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-number">140+</div>
+        <div class="stat-label">countries represented in UBC's student body</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-number">28%</div>
+        <div class="stat-label">of racialized Canadians cite accent as a reason they experienced discrimination</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-number">40%</div>
+        <div class="stat-label">fewer job callbacks for applicants with non-English-sounding names in Canada</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHAT IS ─── -->
+<section id="what-is">
+  <div class="section-inner">
+    <span class="section-label fade-up">Understanding the Issue</span>
+    <h2 class="section-title fade-up">What is Linguistic Justice?</h2>
+    <div class="divider fade-up"></div>
+    <p class="section-intro fade-up">
+      Linguistic justice is the principle that no person should face discrimination, exclusion, or diminished
+      opportunity because of the language they speak, the accent they carry, or the dialect they were raised with.
+      Language hierarchies are not natural they are constructed, and they can be dismantled.
+    </p>
+    <div class="definition-grid">
+      <div class="definition-card fade-up">
+        <h3>Linguistic Discrimination</h3>
+        <p>Also called <em>glottophobia</em> or linguicism, linguistic discrimination is the unfair treatment of people based on their use of language including accent, dialect, vocabulary, or syntax. It is often invisible, dismissed as a preference rather than recognized as bias. At its most harmful, it closes doors in employment, healthcare, education, and belonging.</p>
+        <div class="card-source">Discrimination based on accent can be harder to prove than other forms and that difficulty is itself part of the problem.</div>
+      </div>
+      <div class="definition-card fade-up">
+        <h3>Accent-Based Bias</h3>
+        <p>When listeners perceive a non-native accent, they may unconsciously associate it with lower intelligence, less authority, or reduced credibility, regardless of whether they understood everything that was said. Accent tells you nothing about what someone knows or what they are trying to communicate. But research shows it shapes how much listeners trust them, how seriously they take what is said, and whether they are offered opportunities.</p>
+        <div class="card-source">Research from Concordia University (2022) found that foreign accents are associated with unfair treatment across multiple work contexts in Canada.</div>
+      </div>
+      <div class="definition-card fade-up">
+        <h3>Linguistic Insecurity</h3>
+        <p>When people repeatedly experience correction or dismissal based on how they sound rather than what they are saying, they develop linguistic insecurity. This is a self-consciousness about one's voice that leads to self-silencing, withdrawal from class participation, and a constant internal tax that monolingual speakers in dominant accents rarely pay. The communication often worked. The accent was still penalized.</p>
+        <div class="card-source">Focus group data collected 2024, UBC Linguistic Justice Awareness Project.</div>
+      </div>
+      <div class="definition-card fade-up">
+        <h3>Colonial Roots</h3>
+        <p>In Canada, linguistic injustice has deep colonial roots. Residential schools forcibly stripped Indigenous children of their languages an act of cultural genocide whose effects persist today. English and French were imposed as official languages on lands where over 70 Indigenous languages were spoken. Linguistic justice requires acknowledging this history as its foundation.</p>
+        <div class="card-source">Truth and Reconciliation Commission of Canada, Volume 5, 2015; Statistics Canada, 2021 Census.</div>
+      </div>
+    </div>
+    <div class="blockquote-feature fade-up">
+      <blockquote>
+        "Linguistic justice is about awareness. It starts with the recognition that the way we judge
+        someone's language says far more about us than it does about them and that awareness itself
+        is a form of linguistic justice."
+        <cite>Strang Burton, Associate Professor of Teaching, UBC Linguistics</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+
+<!-- GLOSSARY -->
+<section id="glossary">
+  <div class="section-inner">
+    <span class="section-label fade-up">Key Terms</span>
+    <h2 class="section-title fade-up">Glossary</h2>
+    <div class="divider fade-up"></div>
+    <p class="section-intro fade-up">
+      Linguistic justice has its own vocabulary. These are the terms used by researchers,
+      educators, and advocates in this field. Understanding them is the first step toward
+      being able to name what you experience and what you witness.
+    </p>
+    <div class="glossary-grid fade-up">
+      <div class="glossary-item">
+        <button class="glossary-q" onclick="toggleGlossary(this)">
+          <span>Glottophobia</span>
+          <svg width="16" height="16" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+        </button>
+        <div class="glossary-a">
+          Discrimination or prejudice against individuals based on their language, accent, or dialect. The term was coined by French linguist Philippe Blanchet and is increasingly used alongside "linguicism" to describe a form of social discrimination that is often overlooked precisely because it is so normalized. Unlike racism or sexism, glottophobia rarely has legal protections against it.
+          <div class="gloss-source">Blanchet, P. (2016). Discriminations: combattre la glottophobie.</div>
+        </div>
+      </div>
+      <div class="glossary-item">
+        <button class="glossary-q" onclick="toggleGlossary(this)">
+          <span>Code-Switching</span>
+          <svg width="16" height="16" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+        </button>
+        <div class="glossary-a">
+          The practice of shifting between languages, dialects, or registers depending on social context. While often framed as a neutral skill, code-switching in the context of linguistic justice refers specifically to the labor required of non-dominant speakers to adapt their speech to dominant norms in order to be accepted, understood, or hired. This labor is unequally distributed and psychologically costly.
+          <div class="gloss-source">Young, V. A. (2009). "Nah, We Straight": An Argument Against Code Switching. JAC, 29(1/2).</div>
+        </div>
+      </div>
+      <div class="glossary-item">
+        <button class="glossary-q" onclick="toggleGlossary(this)">
+          <span>Translanguaging</span>
+          <svg width="16" height="16" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+        </button>
+        <div class="glossary-a">
+          A pedagogical and theoretical framework that views multilingual speakers not as operating in separate, bounded language systems, but as drawing fluidly from a unified linguistic repertoire. Translanguaging rejects the idea that switching between languages represents a deficit or a failure of competence. Instead, it recognizes the full complexity of multilingual meaning-making as an asset.
+          <div class="gloss-source">Garcia, O. & Wei, L. (2014). Translanguaging: Language, Bilingualism and Education.</div>
+        </div>
+      </div>
+      <div class="glossary-item">
+        <button class="glossary-q" onclick="toggleGlossary(this)">
+          <span>Raciolinguistics</span>
+          <svg width="16" height="16" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+        </button>
+        <div class="glossary-a">
+          A field of study that examines the intersection of race and language, exploring how racial ideologies shape the way language is perceived, evaluated, and used. Raciolinguistics argues that accent discrimination and language-based judgment cannot be separated from race: when someone's accent is marked as foreign or inferior, racial assumptions are almost always at work in that judgment.
+          <div class="gloss-source">Alim, H. S., Rickford, J. R. & Ball, A. F., eds. (2016). Raciolinguistics: How Language Shapes Our Ideas About Race.</div>
+        </div>
+      </div>
+      <div class="glossary-item">
+        <button class="glossary-q" onclick="toggleGlossary(this)">
+          <span>Standard Language Ideology</span>
+          <svg width="16" height="16" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+        </button>
+        <div class="glossary-a">
+          The widespread belief that there is one correct, superior form of a language, and that deviations from it are errors. In Canada and most English-speaking institutions, this takes the form of privileging white, North American, educated English as the neutral default. Standard language ideology is the ideological foundation of accent discrimination: it naturalizes what is in fact a historically constructed hierarchy.
+          <div class="gloss-source">Lippi-Green, R. (2012). English with an Accent: Language, Ideology and Discrimination in the United States.</div>
+        </div>
+      </div>
+      <div class="glossary-item">
+        <button class="glossary-q" onclick="toggleGlossary(this)">
+          <span>Linguistic Insecurity</span>
+          <svg width="16" height="16" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5d" fill="currentColor"/></svg>
+        </button>
+        <div class="glossary-a">
+          A state of self-consciousness about one's own language use, typically produced by repeated experiences of correction, misunderstanding, or social exclusion based on how one speaks. Linguistic insecurity is documented in Statistics Canada's 2022 survey: 31% of English speakers in Quebec and 24% of French speakers outside Quebec reported hesitating to use their minority language due to insecurity. At UBC, it manifests as self-silencing in classrooms and labs.
+          <div class="gloss-source">Statistics Canada, Survey on the Official Language Minority Population, 2022.</div>
+        </div>
+      </div>
+      <div class="glossary-item">
+        <button class="glossary-q" onclick="toggleGlossary(this)">
+          <span>Code-Meshing</span>
+          <svg width="16" height="16" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+        </button>
+        <div class="glossary-a">
+          A practice and pedagogical approach that integrates multiple languages, dialects, and registers within a single piece of communication, including academic writing. Unlike code-switching, which implies alternating between separate systems, code-meshing treats multilingual expression as unified and legitimate. It challenges the expectation that academic writing must be conducted in Standard Academic English alone.
+          <div class="gloss-source">Young, V. A. & Martinez, A. Y., eds. (2011). Code-Meshing as World English: Pedagogy, Policy, Performance.</div>
+        </div>
+      </div>
+      <div class="glossary-item">
+        <button class="glossary-q" onclick="toggleGlossary(this)">
+          <span>Linguistic Citizenship</span>
+          <svg width="16" height="16" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+        </button>
+        <div class="glossary-a">
+          A framework that positions language as central to civic participation and democratic life. Linguistic citizenship argues that full participation in a society, including in education and public life, requires not just the right to speak, but the right to be heard in one's own language. Applied to the university, it asks: whose languages count as legitimate here, and who bears the cost of translation?
+          <div class="gloss-source">Stroud, C. (2001). African mother-tongue programmes and the politics of language. Journal of Multilingual and Multicultural Development.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DATA ─── -->
+<section id="data">
+  <div class="section-inner">
+    <span class="section-label fade-up">Evidence</span>
+    <h2 class="section-title fade-up">The Data</h2>
+    <div class="divider fade-up"></div>
+    <p class="section-intro fade-up">
+      Linguistic injustice is not anecdotal. It is documented in national statistics,
+      peer-reviewed research, and UBC's own student data.
+    </p>
+
+    <div class="data-tabs fade-up">
+      <button class="data-tab active" onclick="switchTab('canada', this)">Canada-Wide</button>
+      <button class="data-tab" onclick="switchTab('ubc', this)">At UBC</button>
+      <button class="data-tab" onclick="switchTab('indigenous', this)">Indigenous Languages</button>
+      <button class="data-tab" onclick="switchTab('employment', this)">Employment</button>
+    </div>
+
+    <!-- CANADA -->
+    <div class="tab-panel active" id="tab-canada">
+      <div class="stats-grid">
+        <div class="stat-card highlight">
+          <div class="big-num">1 in 4</div>
+          <div class="stat-desc">adults in Canada's official language minority population felt discriminated against based on language in the last 5 years</div>
+          <div class="stat-source">Statistics Canada, 2022 Survey on Official Language Minority Population</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">474</div>
+          <div class="stat-desc">languages spoken at home across Canada including 72 Indigenous languages and 400 non-official languages</div>
+          <div class="stat-source">Statistics Canada, 2021 Census</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">21%</div>
+          <div class="stat-desc">of Canadian households are multilingual over 3.1 million households speak two or more languages at home</div>
+          <div class="stat-source">Statistics Canada, 2021 Census</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">28%</div>
+          <div class="stat-desc">of racialized Canadians who experienced discrimination cited accent. Language was cited by 27%.</div>
+          <div class="stat-source">Statistics Canada, Canadian Social Survey 2021–2024</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">1 in 4</div>
+          <div class="stat-desc">Canadians now has a mother tongue other than English or French the highest proportion ever recorded in census history</div>
+          <div class="stat-source">Statistics Canada, 2021 Census</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">68%</div>
+          <div class="stat-desc">of English-speaking adults in Quebec who experienced linguistic discrimination reported it in personal business settings like banking or shopping</div>
+          <div class="stat-source">Statistics Canada, 2022 Survey on Official Language Minority Population</div>
+        </div>
+      </div>
+
+      <div class="viz-section fade-up">
+        <h3>Reasons Cited for Discrimination Among Racialized Canadians</h3>
+        <p class="viz-sub">Percentage of racialized people who experienced discrimination and cited each reason Statistics Canada, Canadian Social Survey 2021–2024</p>
+        <div class="bar-chart" id="bar-canada">
+          <div class="bar-row">
+            <div class="bar-label">Race or skin colour</div>
+            <div class="bar-track"><div class="bar-fill" data-pct="66"><span>66%</span></div></div>
+            <div class="bar-pct">66%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Ethnicity or culture</div>
+            <div class="bar-track"><div class="bar-fill" data-pct="49"><span>49%</span></div></div>
+            <div class="bar-pct">49%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Accent</div>
+            <div class="bar-track"><div class="bar-fill gold" data-pct="28"><span>28%</span></div></div>
+            <div class="bar-pct">28%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Language</div>
+            <div class="bar-track"><div class="bar-fill gold" data-pct="27"><span>27%</span></div></div>
+            <div class="bar-pct">27%</div>
+          </div>
+        </div>
+      </div>
+      <div class="data-note">Accent-based discrimination is widely considered underreported. Employers and institutions rarely cite language explicitly as a reason for differential treatment. The actual prevalence is likely higher than surveys capture.</div>
+    </div>
+
+    <!-- UBC -->
+    <div class="tab-panel" id="tab-ubc">
+      <div class="stats-grid">
+        <div class="stat-card highlight">
+          <div class="big-num">~60%</div>
+          <div class="stat-desc">of UBCV students speak more than one language at an academic or technical level nearly 2 in 3 students navigate academic English as a non-primary language</div>
+          <div class="stat-source">UBC Student Diversity Census, 2024/25</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">28.6%</div>
+          <div class="stat-desc">of UBC Vancouver's student body are international students, representing over 140 countries</div>
+          <div class="stat-source">UBC Annual Enrolment Report, 2024/25</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">47%</div>
+          <div class="stat-desc">of doctoral students at UBC Vancouver are international navigating advanced academic work in a second or third language</div>
+          <div class="stat-source">UBC Annual Enrolment Report, 2024/25</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">1 in 5</div>
+          <div class="stat-desc">UBC students are first-generation university students, many navigating academic English and institutional culture simultaneously</div>
+          <div class="stat-source">UBC Student Diversity Census, 2024/25</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">74%</div>
+          <div class="stat-desc">of Black students at UBCV reported experiences of racialization language and accent are frequently entangled with racial discrimination</div>
+          <div class="stat-source">UBC Student Diversity Census, 2024/25</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">0</div>
+          <div class="stat-desc">UBC currently has no campus-wide data on linguistic discrimination or accent-based experiences a gap this project begins to address through primary research</div>
+          <div class="stat-source">UBC Linguistic Justice Awareness Project, 2024</div>
+        </div>
+      </div>
+
+      <div class="viz-section fade-up">
+        <h3>Who is Studying at UBC Vancouver?</h3>
+        <p class="viz-sub">Proportion of student body by origin UBC Annual Enrolment Report 2024/25 & Student Diversity Census</p>
+        <div class="donut-row" id="donut-ubc">
+          <div class="donut-item">
+            <div class="donut-wrap">
+              <svg width="100" height="100" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="38" fill="none" stroke="#E8E8E3" stroke-width="12"/>
+                <circle cx="50" cy="50" r="38" fill="none" stroke="#002145" stroke-width="12" stroke-dasharray="238.76" stroke-dashoffset="68.5" class="donut-arc" data-pct="71.4"/>
+              </svg>
+              <div class="donut-center">71%</div>
+            </div>
+            <div class="donut-desc">Domestic students at UBCV</div>
+          </div>
+          <div class="donut-item">
+            <div class="donut-wrap">
+              <svg width="100" height="100" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="38" fill="none" stroke="#E8E8E3" stroke-width="12"/>
+                <circle cx="50" cy="50" r="38" fill="none" stroke="#97731B" stroke-width="12" stroke-dasharray="238.76" stroke-dashoffset="193.3" class="donut-arc" data-pct="28.6"/>
+              </svg>
+              <div class="donut-center">29%</div>
+            </div>
+            <div class="donut-desc">International students at UBCV</div>
+          </div>
+          <div class="donut-item">
+            <div class="donut-wrap">
+              <svg width="100" height="100" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="38" fill="none" stroke="#E8E8E3" stroke-width="12"/>
+                <circle cx="50" cy="50" r="38" fill="none" stroke="#40A5C8" stroke-width="12" stroke-dasharray="238.76" stroke-dashoffset="126.5" class="donut-arc" data-pct="47"/>
+              </svg>
+              <div class="donut-center">47%</div>
+            </div>
+            <div class="donut-desc">PhD students who are international</div>
+          </div>
+          <div class="donut-item">
+            <div class="donut-wrap">
+              <svg width="100" height="100" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="38" fill="none" stroke="#E8E8E3" stroke-width="12"/>
+                <circle cx="50" cy="50" r="38" fill="none" stroke="#002145" stroke-width="12" stroke-dasharray="238.76" stroke-dashoffset="191.0" class="donut-arc" data-pct="20"/>
+              </svg>
+              <div class="donut-center">20%</div>
+            </div>
+            <div class="donut-desc">First-generation university students</div>
+          </div>
+        </div>
+      </div>
+      <div class="data-note">UBC's 2024/25 Student Diversity Census tracks languages spoken but does not yet measure linguistic discrimination directly. The focus groups conducted for this project represent the first primary research on accent-based experiences at UBC Vancouver.</div>
+    </div>
+
+    <!-- INDIGENOUS -->
+    <div class="tab-panel" id="tab-indigenous">
+      <div class="stats-grid">
+        <div class="stat-card highlight">
+          <div class="big-num">−4.3%</div>
+          <div class="stat-desc">decline in Indigenous language speakers in Canada between 2016 and 2021 the first recorded decline since data collection began in 1991</div>
+          <div class="stat-source">Statistics Canada, 2021 Census</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">70+</div>
+          <div class="stat-desc">Indigenous languages currently spoken in Canada the majority are endangered, with most having fewer than 1,000 fluent speakers</div>
+          <div class="stat-source">Statistics Canada, 2021 Census</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">237,420</div>
+          <div class="stat-desc">Indigenous people in Canada able to speak an Indigenous language in 2021 down from 248,170 in 2016</div>
+          <div class="stat-source">Statistics Canada, 2021 Census</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">6×</div>
+          <div class="stat-desc">higher suicide rates in Indigenous communities where fewer than half of members can converse in their ancestral language</div>
+          <div class="stat-source">Hallett et al., cited in MDPI Societies, 2021</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">150+</div>
+          <div class="stat-desc">years of residential schools in Canada that forbade children from speaking their Indigenous languages punishing those who did</div>
+          <div class="stat-source">Truth and Reconciliation Commission of Canada, 2015</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">2019</div>
+          <div class="stat-desc">the year Canada's Indigenous Languages Act received royal assent responding directly to TRC Calls to Action 13, 14, and 15</div>
+          <div class="stat-source">Government of Canada</div>
+        </div>
+      </div>
+
+      <div class="viz-section fade-up">
+        <h3>Indigenous Language Speaker Decline in Canada</h3>
+        <p class="viz-sub">Number of Indigenous language speakers able to hold a conversation Statistics Canada, Census data</p>
+        <div class="bar-chart">
+          <div class="bar-row">
+            <div class="bar-label">2001</div>
+            <div class="bar-track"><div class="bar-fill light" data-pct="85"><span>~203,000</span></div></div>
+            <div class="bar-pct">203k</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">2006</div>
+            <div class="bar-track"><div class="bar-fill light" data-pct="90"><span>~212,000</span></div></div>
+            <div class="bar-pct">212k</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">2011</div>
+            <div class="bar-track"><div class="bar-fill" data-pct="97"><span>~229,000</span></div></div>
+            <div class="bar-pct">229k</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">2016</div>
+            <div class="bar-track"><div class="bar-fill" data-pct="100"><span>~248,000</span></div></div>
+            <div class="bar-pct">248k</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">2021 ▼</div>
+            <div class="bar-track"><div class="bar-fill gold" data-pct="95"><span>237,420</span></div></div>
+            <div class="bar-pct">237k</div>
+          </div>
+        </div>
+      </div>
+      <div class="data-note">Any framework for linguistic justice at UBC must begin with a recognition of the colonial history of language suppression on these unceded territories. The university sits on the traditional, ancestral, and unceded territory of the xʷməθkʷəy̓əm (Musqueam) people.</div>
+    </div>
+
+    <!-- EMPLOYMENT -->
+    <div class="tab-panel" id="tab-employment">
+      <div class="stats-grid">
+        <div class="stat-card highlight">
+          <div class="big-num">40%</div>
+          <div class="stat-desc">fewer job interview callbacks for applicants with Indian, Pakistani, or Chinese-sounding names holding education and experience constant</div>
+          <div class="stat-source">Oreopoulos (2009), cited in TIEDI Analytical Report</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">28%</div>
+          <div class="stat-desc">decrease in callback rates when only the name on a resume was changed from English-sounding to South Asian or East Asian</div>
+          <div class="stat-source">J-PAL / Canadian labour market study</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">0</div>
+          <div class="stat-desc">improvement in callbacks when non-English-named applicants listed multilingual fluency language skills did not offset name-based bias</div>
+          <div class="stat-source">J-PAL evaluation, Canadian labour market</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">50+</div>
+          <div class="stat-desc">years of field experiments consistently documenting ethnic and racial discrimination in Canadian hiring linguistic bias is a key mechanism</div>
+          <div class="stat-source">Zschirnt & Ruedin (2016), meta-analysis</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">Blocked</div>
+          <div class="stat-desc">Qualified African immigrant women in Vancouver reported their accent alone prevented hiring skills secured interviews, but accents ended them</div>
+          <div class="stat-source">Creese & Kambere, UBC research on African immigrant women in Vancouver</div>
+        </div>
+        <div class="stat-card">
+          <div class="big-num">Harder</div>
+          <div class="stat-desc">to prove: employers rarely cite language or accent explicitly, making linguistic discrimination among the most legally underaddressed forms of workplace bias</div>
+          <div class="stat-source">UBC Wiki: Linguistic Discrimination Against Immigrants in Canada</div>
+        </div>
+      </div>
+
+      <div class="viz-section fade-up">
+        <h3>Callback Rate Gap by Resume Name Canada</h3>
+        <p class="viz-sub">Relative job interview callback rates by applicant name type, holding education and experience equal Oreopoulos (2009)</p>
+        <div class="bar-chart">
+          <div class="bar-row">
+            <div class="bar-label">English-sounding name</div>
+            <div class="bar-track"><div class="bar-fill" data-pct="100"><span>Baseline</span></div></div>
+            <div class="bar-pct">100%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Greek-sounding name</div>
+            <div class="bar-track"><div class="bar-fill light" data-pct="75"><span>−25%</span></div></div>
+            <div class="bar-pct">75%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Indian / Pakistani name</div>
+            <div class="bar-track"><div class="bar-fill gold" data-pct="62"><span>−38%</span></div></div>
+            <div class="bar-pct">62%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Chinese-sounding name</div>
+            <div class="bar-track"><div class="bar-fill gold" data-pct="60"><span>−40%</span></div></div>
+            <div class="bar-pct">60%</div>
+          </div>
+        </div>
+      </div>
+      <div class="data-note">For students preparing to enter the Canadian labour market, being multilingual a sign of cognitive flexibility and cultural competence is not being rewarded. In many cases, it actively disadvantages applicants before they even speak a word.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="section-inner">
+    <span class="section-label fade-up">Historical Context</span>
+    <h2 class="section-title fade-up">A Timeline of Linguistic Injustice in Canada</h2>
+    <div class="divider fade-up"></div>
+    <p class="section-intro fade-up">
+      Linguistic injustice at UBC does not exist in isolation. It is part of a longer history
+      of language suppression, official language politics, and the slow, ongoing work of recognition and repair.
+    </p>
+    <div class="timeline fade-up">
+      <div class="timeline-item">
+        <div class="tl-year">Pre-contact</div>
+        <div class="tl-content">
+          <h4>Over 70 Indigenous Languages</h4>
+          <p>Before European colonization, what is now Canada was home to a rich diversity of Indigenous language families, including Algonquian, Athabaskan, Salish, Iroquoian, and Inuktut. Multilingualism was common; many nations spoke several languages across trade and kinship networks.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-year">1763</div>
+        <div class="tl-content">
+          <h4>Royal Proclamation</h4>
+          <p>The British Crown asserts sovereignty over vast Indigenous territories. English begins its institutionalization as the language of colonial administration, displacing Indigenous governance structures and the languages in which they operated.</p>
+        </div>
+      </div>
+      <div class="timeline-item tl-dark">
+        <div class="tl-year">1876</div>
+        <div class="tl-content">
+          <h4>The Indian Act</h4>
+          <p>Passed by the Canadian government, the Indian Act imposes sweeping controls on Indigenous peoples including restrictions on cultural practices and language. It creates the legal infrastructure for residential schools. Indigenous languages are increasingly treated as obstacles to assimilation rather than as complex, living knowledge systems.</p>
+        </div>
+      </div>
+      <div class="timeline-item tl-dark">
+        <div class="tl-year">1883–1996</div>
+        <div class="tl-content">
+          <h4>Residential Schools</h4>
+          <p>The Canadian government operates a network of residential schools in which Indigenous children are forcibly removed from their families and prohibited from speaking their languages. Children are punished for speaking their mother tongues. This systematic suppression is recognized by the Truth and Reconciliation Commission as cultural genocide. Over 150,000 children pass through the system. The last federally-run residential school closes in 1996.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-year">1969</div>
+        <div class="tl-content">
+          <h4>Official Languages Act</h4>
+          <p>Canada declares English and French its two official languages, establishing bilingual rights in federal institutions. While framed as an equality measure, the Act entrenches a two-language hierarchy that does not recognize the over 70 Indigenous languages already present on these lands, or the hundreds of immigrant languages spoken by Canadians.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-year">2015</div>
+        <div class="tl-content">
+          <h4>Truth and Reconciliation Commission Calls to Action</h4>
+          <p>The TRC releases 94 Calls to Action. Calls to Action 13, 14, and 15 specifically address Indigenous language and culture: the federal government must acknowledge that Indigenous rights include language rights, fund Indigenous language education, and appoint a languages commissioner to lead revitalization efforts.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-year">2019</div>
+        <div class="tl-content">
+          <h4>Indigenous Languages Act</h4>
+          <p>Canada's Indigenous Languages Act receives royal assent, marking the first federal legislation specifically aimed at preserving, revitalizing, and promoting Indigenous languages. Critics note that while the Act is a step forward, it lacks binding funding commitments and does not fully reflect the distinctions between First Nations, Métis, and Inuit language needs.</p>
+        </div>
+      </div>
+      <div class="timeline-item tl-dark">
+        <div class="tl-year">2021</div>
+        <div class="tl-content">
+          <h4>First Decline in Indigenous Language Speakers</h4>
+          <p>Statistics Canada reports that the number of Indigenous people who can speak an Indigenous language falls for the first time since comparable data collection began in 1991. 237,420 speakers remain, down from 248,170 in 2016. Revitalization efforts are growing, but language loss continues to outpace them in many communities.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-year">2022</div>
+        <div class="tl-content">
+          <h4>Statistics Canada Documents Linguistic Discrimination</h4>
+          <p>For the first time, the Survey on the Official Language Minority Population includes direct questions on linguistic insecurity and discrimination. Results show 1 in 4 adults in language minority populations have experienced discrimination based on language in the previous five years. The Canadian Social Survey also documents accent as a reported reason for discrimination among racialized Canadians.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-year">2024</div>
+        <div class="tl-content">
+          <h4>UBC Linguistic Justice Awareness Project</h4>
+          <p>Eight focus groups are conducted at UBC Vancouver with students from over 15 countries. The research documents accent-based self-silencing, microaggressions, institutional barriers, and resilience across the student body. It is the first primary research on linguistic discrimination specifically at UBC Vancouver, beginning to fill a gap that the Student Diversity Census has not yet addressed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── STUDENT VOICES ─── -->
+<section id="stories">
+  <div class="section-inner">
+    <span class="section-label fade-up">Lived Experience</span>
+    <h2 class="section-title fade-up">Student Voices</h2>
+    <div class="divider fade-up" style="background:var(--ubc-gold);"></div>
+    <p class="section-intro fade-up">
+      Between September and November 2024, we conducted eight focus groups with UBC students
+      from over 15 countries. What follows are direct reflections anonymized, but unedited.
+    </p>
+    <div class="stories-grid">
+      <div class="story-card fade-up">
+        <div class="story-quote">In Spanish I'm a very funny person, I make lots of jokes. When I came to Canada and started having relationships in English, I was always looking for the perfect grammatical way to express myself. It took me years to know that I'm also funny in English.</div>
+        <div class="story-attr">Master's student · Costa Rica · Education</div>
+      </div>
+      <div class="story-card fade-up">
+        <div class="story-quote">In my lab, because there are mostly native speakers, I prefer not to speak that much. I prefer to listen and answer when it's necessary. It's something that comes from inside, I guess.</div>
+        <div class="story-attr">Master's student · Iran · Pharmacology</div>
+      </div>
+      <div class="story-card fade-up">
+        <div class="story-quote">In Nigeria, my accent is the norm it's the neutral accent. Coming here, my accent is definitely not the normative accent. At first it was quite difficult, because people found it hard to understand me, and it felt like quite an isolating experience.</div>
+        <div class="story-attr">Graduate student · Nigeria · MFA program</div>
+      </div>
+      <div class="story-card fade-up">
+        <div class="story-quote">I had a well-meaning person tell me I should take an accent reduction class to make my own life easier, so I could get opportunities. It didn't help. Just the fact that I was told that didn't help my mental state at that time.</div>
+        <div class="story-attr">Graduate student · Multiple focus groups · Various programs</div>
+      </div>
+      <div class="story-card fade-up">
+        <div class="story-quote">I was made fun of a lot when I was young because I didn't speak Yoruba, even though my parents spoke it. I want to learn it I feel like it's a core part of my identity. But there's so much other pressure just from being a university student.</div>
+        <div class="story-attr">Undergraduate student · Nigeria / South Africa · Arts</div>
+      </div>
+      <div class="story-card fade-up">
+        <div class="story-quote">Do you know how much easier it is to communicate what I want to say in my own language? When I'm tired, when I'm stressed you lose that when you're always operating in your second language.</div>
+        <div class="story-attr">PhD student · Sciences</div>
+      </div>
+      <div class="story-card fade-up">
+        <div class="story-quote">I refused to be recorded in class. I didn't want to be captured making a grammar mistake, choosing the wrong word. They weren't willing to accommodate that. I was really hurt.</div>
+        <div class="story-attr">PhD student · Sciences</div>
+      </div>
+      <div class="story-card fade-up">
+        <div class="story-quote">People here always say I speak really good English. And it just feels like a backhanded compliment. You can tell they treat me better because of it because my accent sounds more like what they expect "proper" English to sound like.</div>
+        <div class="story-attr">Graduate student · Nigeria / South Africa · Arts</div>
+      </div>
+      <div class="story-card fade-up">
+        <div class="story-quote">I remember being very conscious of my accent and hating it. I would apologize for it. And then someone once told me never apologize for your accent. Take it as a badge of honor. How many people can say they speak multiple languages?</div>
+        <div class="story-attr">PhD student · Sciences</div>
+      </div>
+    </div>
+    <div class="stories-note">
+      All quotes are drawn from focus group transcripts collected September–November 2024 at UBC Vancouver.
+      Participants are anonymized. All participants provided informed consent.
+      This research was conducted under the UBC Faculty of Arts.
+    </div>
+  </div>
+</section>
+
+<!-- ─── SHARE YOUR STORY ─── -->
+<section id="share">
+  <div class="section-inner">
+    <span class="section-label fade-up">Your Voice Matters</span>
+    <h2 class="section-title fade-up">Share Your Story</h2>
+    <div class="divider fade-up"></div>
+    <div class="share-layout">
+      <div class="share-intro fade-up">
+        <p>
+          Our focus groups gave us a window into the linguistic experiences of 22 students across
+          eight sessions. But UBC has over 73,000 students. This form is how we keep listening.
+        </p>
+        <p>
+          Have you ever held back in class because of how you speak? Been asked to repeat yourself
+          until you stopped trying? Felt proud, surprised, or empowered by your own language?
+          Your experience whatever it is contributes to the picture.
+        </p>
+        <p>
+          Submissions are anonymous by default. With your permission, anonymized quotes may appear
+          on this website or in future materials. Your story will never be used without consent.
+        </p>
+        <div class="impact-note">
+          <strong>Why this matters</strong>
+          UBC currently has no institutional data on linguistic discrimination on campus.
+          Every submission helps build the evidence base and shows the university that
+          this experience is real, present, and deserves a response.
+        </div>
+      </div>
+      <div class="fade-up">
+        <div class="share-form" id="storyForm">
+          <h3>Tell us about your experience</h3>
+          <p class="form-note">All fields are optional. This form is anonymous unless you choose to share your name.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your program / department</label>
+              <input type="text" placeholder="e.g. Computer Science, Arts">
+            </div>
+            <div class="form-group">
+              <label>Your student level</label>
+              <select>
+                <option value="">Select…</option>
+                <option>Undergraduate</option>
+                <option>Master's</option>
+                <option>PhD / Doctoral</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Languages you speak</label>
+            <input type="text" placeholder="e.g. Mandarin, English, French">
+          </div>
+          <div class="form-group">
+            <label>Your experience</label>
+            <textarea placeholder="Has your accent, language, or way of speaking ever affected your experience at UBC? Tell us what happened in your own words, in any language you like."></textarea>
+          </div>
+          <div class="form-group">
+            <label>May we quote this anonymously?</label>
+            <select>
+              <option value="">Select…</option>
+              <option>Yes you may use an anonymized version</option>
+              <option>No for research purposes only</option>
+              <option>I'd like to discuss this first</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Contact (optional)</label>
+            <input type="email" placeholder="Your UBC email if you'd like to be contacted">
+          </div>
+          <p class="form-privacy">Your submission is stored securely and will only be accessed by the research team. It will never be shared with UBC administration without your explicit consent.</p>
+          <button class="btn-submit" onclick="submitForm()">Submit Your Story</button>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <h4>Thank you for sharing.</h4>
+          <p>Your experience has been received. It contributes to building a more complete picture of linguistic life at UBC and that matters.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FILM ─── -->
+<section id="film">
+  <div class="section-inner">
+    <span class="section-label fade-up">Documentary Short</span>
+    <h2 class="section-title fade-up">Watch</h2>
+    <div class="divider fade-up"></div>
+    <div class="film-layout">
+      <div class="film-embed fade-up">
+        <div class="film-placeholder">
+          <div class="play-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#002145"/></svg>
+          </div>
+          <div class="film-embed-label">Film embed coming soon</div>
+        </div>
+      </div>
+      <div class="film-info fade-up">
+        <div class="film-meta">Documentary Short · UBC Linguistic Justice Awareness Project · 2025</div>
+        <h3>Your Voice Belongs Here</h3>
+        <p class="film-body">
+          This short documentary brings together students, faculty, and researchers from across
+          UBC to speak about their relationships with language, accent, and belonging. It moves
+          from personal experience to collective understanding asking what it means to truly
+          include every voice in the academic community.
+        </p>
+        <p class="film-body">
+          Two versions are available for different contexts.
+          A 3-minute awareness version for quick intros, social media, and event openers.
+          A 15-minute extended version for workshops, orientations, equity training, and
+          classroom use with discussion time.
+        </p>
+        <div class="film-versions">
+          <span class="version-tag">3-Min Awareness Version</span>
+          <span class="version-tag">15-Min Extended Version</span>
+        </div>
+        <div class="film-credits" style="margin-top:1.5rem;">
+          <strong>Project Details</strong>
+          Project Director: Dr. Moberley Luger<br>
+          Research &amp; Creative Lead: Ihomehe R. G. Agbebaku<br>
+          Faculty of Arts, UBC Vancouver<br>
+          Supported by the StEAR Fund and UBC Faculty of Arts
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section id="about">
+  <div class="section-inner">
+    <span class="section-label fade-up">The Project</span>
+    <h2 class="section-title fade-up">About This Project</h2>
+    <div class="divider fade-up"></div>
+    <div class="about-layout">
+      <div class="about-body fade-up">
+        <p>
+          The Linguistic Justice Awareness Project is a research and awareness initiative
+          based at the University of British Columbia, Faculty of Arts. It was developed to
+          document student experiences of accent-based discrimination and linguistic
+          marginalization at UBC and to use those findings to build a more inclusive campus.
+        </p>
+        <p>
+          Between September and November 2024, the project conducted eight focus groups with
+          graduate and undergraduate students representing over fifteen countries and a wide
+          range of disciplines. All sessions were facilitated by a Nigerian-born researcher
+          who brought firsthand experience with accent-based discrimination to the facilitation,
+          modeling vulnerability and generating deeper disclosure.
+        </p>
+        <p>
+          The project's outputs include a thematic analysis report, a short documentary film,
+          and this website which synthesizes the research alongside national data on
+          linguistic injustice in Canada. It sits within UBC's Strategic Equity and
+          Anti-Racism (StEAR) Framework, which calls for identifying and dismantling systemic
+          barriers to equity linguistic difference among them.
+        </p>
+        <p>
+          This work connects to a growing field at UBC: the PRISM Framework at UBC Okanagan
+          examines plurilingualism and decolonization in the first-year writing classroom;
+          the 2025 Speaker Series on Plurality, Linguistic Justice, and Decolonization brought
+          fifteen scholars together to advance these conversations. This project contributes
+          the student perspective gathered directly, in their own words.
+        </p>
+        <div class="partner-list">
+          <h4>Affiliated With</h4>
+          <div class="partners">
+            <span class="partner-tag">UBC Faculty of Arts</span>
+            <span class="partner-tag">StEAR Fund</span>
+            <span class="partner-tag">UBC Creative Writing MFA</span>
+            <span class="partner-tag">UBC English Language and Literatures</span>
+            <span class="partner-tag">UBC Equity & Inclusion Office</span>
+          </div>
+        </div>
+      </div>
+      <div class="fade-up">
+        <span style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:var(--ubc-gold);font-weight:600;display:block;margin-bottom:1.25rem;">Project Team</span>
+        <div class="team-grid" style="grid-template-columns:1fr;">
+          <div class="team-card">
+            <div class="name">Dr. Moberley Luger</div>
+            <div class="role" style="font-size:13px;line-height:1.7;margin-top:0.3rem;">Project Director<br>English Language &amp; Literatures, UBC</div>
+          </div>
+          <div class="team-card" style="border-top:2px solid var(--ubc-gold);">
+            <div class="name">Ihomehe R. G. Agbebaku</div>
+            <div class="role" style="font-size:13px;line-height:1.7;margin-top:0.3rem;">Research &amp; Creative Lead<br>MFA Candidate, Creative Writing, UBC</div>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;">
+          <span style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:var(--ubc-gold);font-weight:600;display:block;margin-bottom:1rem;">Faculty Contributors</span>
+          <div style="display:flex;flex-direction:column;gap:2px;">
+            <div class="team-card" style="padding:1rem 1.5rem;">
+              <div class="name" style="font-size:14px;">Dr. Marie-Eve Bouchard</div>
+              <div class="role">Department of French, Hispanic and Italian Studies, UBC</div>
+            </div>
+            <div class="team-card" style="padding:1rem 1.5rem;">
+              <div class="name" style="font-size:14px;">Dr. Sandra Zappa-Hollman</div>
+              <div class="role">Department of Language and Literacy Education, UBC</div>
+            </div>
+            <div class="team-card" style="padding:1rem 1.5rem;">
+              <div class="name" style="font-size:14px;">Dr. Strang Burton</div>
+              <div class="role">Department of Linguistics, UBC</div>
+            </div>
+            <div class="team-card" style="padding:1rem 1.5rem;">
+              <div class="name" style="font-size:14px;">Craig Stensrud</div>
+              <div class="role">Department of English, Kwantlen Polytechnic University</div>
+            </div>
+            <div class="team-card" style="padding:1rem 1.5rem;">
+              <div class="name" style="font-size:14px;">Trish Varao-Sousa</div>
+              <div class="role">Research Specialist, CTLT, UBC</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:2.5rem;">
+          <span style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:var(--ubc-gold);font-weight:600;display:block;margin-bottom:1.25rem;">UBC Context</span>
+          <p style="font-size:14px;color:var(--dark-gray);line-height:1.8;margin-bottom:1rem;">
+            Linguistic discrimination is a systemic barrier that UBC's EDI frameworks
+            have yet to name directly. The Student Diversity Census tracks languages spoken
+            but does not measure linguistic discrimination or accent-based experiences.
+            This project creates the primary evidence that currently does not exist.
+          </p>
+          <p style="font-size:14px;color:var(--dark-gray);line-height:1.8;">
+            UBC sits on the traditional, ancestral, and unceded territory of the
+            xʷməθkʷəy̓əm (Musqueam) people. Linguistic justice on this campus must be
+            grounded in that history and in the ongoing work of Indigenous language
+            revitalization.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- IF YOU ARE EXPERIENCING -->
+<section id="experiencing">
+  <div class="section-inner">
+    <span class="section-label fade-up">For Those Living It</span>
+    <h2 class="section-title fade-up">If you are experiencing linguistic discrimination</h2>
+    <div class="divider fade-up"></div>
+    <p class="section-intro fade-up">
+      This page is full of data and institutional language. But before any of that,
+      this section is for you specifically. For the student who lowered their voice.
+      Who stopped putting their hand up. Who practiced a sentence alone before saying it out loud.
+    </p>
+
+    <div class="affirm-statement fade-up">
+      <p>Your accent is not a barrier to your intelligence. It is evidence of a life lived across languages, cultures, and worlds that most people in this institution have never had to navigate.</p>
+      <p>Academic and professional environments have legitimate expectations around communication. What they do not have the right to do is confuse how you sound with how well you think. Those are different things, and the research is unambiguous on this point. The discomfort you feel is a rational response to a system that has collapsed that distinction and placed the cost of it on you.</p>
+      <p>You do not need to reduce your accent to deserve your place here. You already deserve it.</p>
+    </div>
+
+    <div class="affirm-grid">
+      <div class="affirm-card fade-up">
+        <h3>The self-silencing is real and you are not alone in it</h3>
+        <p>In our focus groups, students from over 15 countries described the same experience: choosing not to speak in class, in labs, in meetings, not because they had nothing to say, but because they were afraid of how they would be received. If that is you, know that it is one of the most consistent findings in this research. You are not uniquely struggling. You are part of a majority that has been made to feel like a minority.</p>
+      </div>
+      <div class="affirm-card fade-up">
+        <h3>The internal pressure is a form of harm</h3>
+        <p>Being told, even by well-meaning people, to take an accent reduction class, to speak more slowly, to enunciate more clearly these suggestions carry a message that your natural voice is a problem to be fixed. That message is wrong. Adapting how you speak to communicate more clearly is a choice that belongs to you, not an obligation imposed by others. The pressure you feel to change is a form of harm, even when the person applying it means well.</p>
+      </div>
+      <div class="affirm-card fade-up">
+        <h3>Your multilingualism is a form of intelligence</h3>
+        <p>Operating in a second or third language requires cognitive flexibility, cultural agility, and a level of sustained effort that monolingual speakers rarely recognize or acknowledge. The research is clear on this. What is not always clear is whether the institutions you are operating within recognize it. This project exists, in part, to make that case.</p>
+      </div>
+      <div class="affirm-card fade-up">
+        <h3>You have options if you want to use them</h3>
+        <p>If you have experienced discrimination based on your accent or language at UBC, you can report it. UBC's Equity and Inclusion Office offers confidential support and reporting pathways. You can also share your experience through the form on this site, which contributes to the evidence base without requiring you to identify yourself. You do not have to do anything but the options exist.</p>
+      </div>
+    </div>
+
+    <div class="fade-up">
+      <div style="font-size:12px;text-transform:uppercase;letter-spacing:0.12em;color:var(--ubc-gold-light);font-weight:600;margin-bottom:1rem;">Support and reporting at UBC</div>
+      <div class="support-links">
+        <a href="https://equity.ubc.ca" target="_blank" class="support-link">Equity & Inclusion Office</a>
+        <a href="https://students.ubc.ca/health" target="_blank" class="support-link">Student Health & Wellbeing</a>
+        <a href="https://ombudsperson.ubc.ca" target="_blank" class="support-link">UBC Ombudsperson</a>
+        <a href="javascript:void(0)" onclick="scrollToSection('share')" class="support-link">Share Your Story Anonymously</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU CAN DO -->
+<section id="you">
+  <div class="section-inner">
+    <span class="section-label fade-up">Allyship</span>
+    <h2 class="section-title fade-up">What you can do as an ally</h2>
+    <div class="divider fade-up"></div>
+    <p class="section-intro fade-up">
+      Linguistic justice is built in classrooms, labs, offices, and group chats every day,
+      not only in policy documents. If you are not the person experiencing discrimination,
+      here is what you can do depending on where you sit.
+    </p>
+    <div class="you-grid">
+      <div class="you-card fade-up">
+        <div class="you-audience">If you are a student</div>
+        <h3>Notice when you ask someone to repeat themselves</h3>
+        <p>Before asking, pause and ask: did the meaning come through? If it did, the communication worked, even if the accent was unfamiliar. The labor of being understood is rarely distributed equally. Try adjusting toward someone before asking them to come all the way to you.</p>
+      </div>
+      <div class="you-card fade-up">
+        <div class="you-audience">If you are a student</div>
+        <h3>Share this project with your class or department</h3>
+        <p>The most immediate thing you can do is put this in front of more people. Send the link to a professor, post it in a group chat, bring it up in a seminar. Awareness spreads person by person.</p>
+      </div>
+      <div class="you-card fade-up">
+        <div class="you-audience">If you are a student</div>
+        <h3>Examine your own assumptions about "good English"</h3>
+        <p>Most of us have internalized a hierarchy of accents which ones sound educated, which ones sound foreign, which ones sound authoritative. That hierarchy was taught to you. It can be unlearned. Start by noticing it.</p>
+      </div>
+      <div class="you-card fade-up">
+        <div class="you-audience">If you are an instructor</div>
+        <h3>Audit your assessment language</h3>
+        <p>Look at your rubrics. Do they reward Standard Academic English as the default? Consider whether the criteria you use to assess "clarity" or "communication" inadvertently penalize students who are doing their most complex intellectual work in a language that is not their first.</p>
+      </div>
+      <div class="you-card fade-up">
+        <div class="you-audience">If you are an instructor</div>
+        <h3>Never correct a student's accent mid-sentence</h3>
+        <p>Interrupting a student to correct how they said something rather than what they said teaches them that the way they speak is more important than what they are trying to communicate. It isn't. Focus on content first, always.</p>
+      </div>
+      <div class="you-card fade-up">
+        <div class="you-audience">If you are an instructor</div>
+        <h3>Download and use the instructor guide</h3>
+        <p>The guide includes discussion questions, classroom activities, and further reading designed specifically for bringing this project into your teaching. It takes five minutes to download and can open an hour of meaningful conversation.</p>
+      </div>
+      <div class="you-card fade-up">
+        <div class="you-audience">If you are a supervisor</div>
+        <h3>Distinguish between clarity and correctness</h3>
+        <p>Your supervisee may communicate differently than you do. That is not the same as communicating poorly. There are legitimate expectations around academic communication, but accent is not one of them. Before correcting word choice or phrasing, ask whether the meaning came through. If it did, the communication worked, and the correction can wait or be dropped entirely.</p>
+      </div>
+      <div class="you-card fade-up">
+        <div class="you-audience">If you are a supervisor</div>
+        <h3>Create space before you correct</h3>
+        <p>Focus group participants described supervisors who interrupted frequently to correct word choice as a source of significant anxiety. Consider waiting until a natural pause, framing feedback as a question rather than a correction, and separating language feedback from content feedback so students can hear both.</p>
+      </div>
+      <div class="you-card fade-up">
+        <div class="you-audience">If you are anyone</div>
+        <h3>Learn something in a language spoken around you</h3>
+        <p>Even a few words in Mandarin, Punjabi, Farsi, or Tagalog languages spoken by thousands of people on this campus is a gesture that says: your language has value here, not just your English. It matters more than you might think.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECOMMENDATIONS -->
+<section id="recommendations">
+  <div class="section-inner">
+    <span class="section-label fade-up">Institutional Asks</span>
+    <h2 class="section-title fade-up">What UBC Can Do</h2>
+    <div class="divider fade-up"></div>
+    <p class="section-intro fade-up">
+      Awareness is necessary but not sufficient. These are concrete, actionable recommendations
+      drawn from the focus group data and existing literature. They are directed at UBC as an institution.
+    </p>
+    <div class="rec-grid">
+      <div class="rec-card fade-up">
+        <div class="rec-num">01</div>
+        <h3>Measure what is missing</h3>
+        <p>Add questions about linguistic discrimination and accent-based experiences to the Student Diversity Census. UBC currently tracks languages spoken, but has no data on how those languages affect student experience. You cannot address what you do not measure.</p>
+        <div class="rec-who">Directed at: Planning & Institutional Research, Equity & Inclusion Office</div>
+      </div>
+      <div class="rec-card fade-up">
+        <div class="rec-num">02</div>
+        <h3>Reform lecture capture policy</h3>
+        <p>Create a formal accommodation pathway for students who experience significant anxiety about being recorded in a second or third language. The current policy requires all participating students to use a microphone, with no flexibility. One focus group participant described being hurt and excluded by the institution's refusal to offer an alternative. A simple policy adjustment could prevent this.</p>
+        <div class="rec-who">Directed at: UBC Centre for Teaching, Learning and Technology; individual instructors</div>
+      </div>
+      <div class="rec-card fade-up">
+        <div class="rec-num">03</div>
+        <h3>Train supervisors on language-supportive feedback</h3>
+        <p>Graduate supervisors and lab PIs often provide the most sustained academic relationship for international students. Focus group data shows that well-intentioned but interruptive correction of word choice compounds linguistic anxiety, particularly in lab environments where power differentials are high. UBC should include language-supportive feedback practices in supervisor training programs.</p>
+        <div class="rec-who">Directed at: Faculty of Graduate and Postdoctoral Studies, individual supervisors</div>
+      </div>
+      <div class="rec-card fade-up">
+        <div class="rec-num">04</div>
+        <h3>Name linguistic justice in equity frameworks</h3>
+        <p>UBC's StEAR Framework and Inclusion Action Plan address racism, ableism, and gender discrimination but do not explicitly name linguistic discrimination or accent-based bias. Naming it is not symbolic: it creates the institutional language needed for students to report experiences, for instructors to recognize and address it, and for the university to be held accountable for it.</p>
+        <div class="rec-who">Directed at: Equity & Inclusion Office, StEAR Framework governance</div>
+      </div>
+      <div class="rec-card fade-up">
+        <div class="rec-num">05</div>
+        <h3>Recognize multilingualism as a credential</h3>
+        <p>UBC's graduate programs require English proficiency scores as a threshold for entry, but do not recognize multilingualism as an academic asset in admissions or assessment. Institutional recognition that students operating across two or three languages daily are performing significant cognitive labor, not demonstrating a deficit, would shift the frame from remediation to recognition.</p>
+        <div class="rec-who">Directed at: Admissions, individual faculties and programs</div>
+      </div>
+      <div class="rec-card fade-up">
+        <div class="rec-num">06</div>
+        <h3>Support Indigenous language learning on campus</h3>
+        <p>Any institutional commitment to linguistic justice must begin with Indigenous languages. UBC should expand Indigenous language course offerings, fund Indigenous language programming through the First Nations Languages Program, and actively integrate Indigenous language learning into its land acknowledgment practice rather than treating acknowledgment as a standalone gesture.</p>
+        <div class="rec-who">Directed at: UBC First Nations Languages Program, Senior Administration</div>
+      </div>
+    </div>
+    <div class="rec-note fade-up">
+      These recommendations were developed from primary focus group research conducted at UBC Vancouver
+      in 2024 and from the existing scholarly literature on linguistic justice in higher education.
+      They are offered as a starting point for institutional dialogue, not as a final or exhaustive list.
+    </div>
+  </div>
+</section>
+
+<!-- ─── RESOURCES ─── -->
+<section id="resources">
+  <div class="section-inner">
+    <span class="section-label fade-up">Take Action</span>
+    <h2 class="section-title fade-up">Resources</h2>
+    <div class="divider fade-up"></div>
+    <p class="section-intro fade-up">
+      Whether you're a student navigating linguistic insecurity, a faculty member rethinking
+      your classroom, or a researcher exploring this issue start here.
+    </p>
+
+    <div class="resources-primary fade-up">
+      <div>
+        <h3>Watch the project. Start the conversation.</h3>
+        <p>The most powerful thing you can do right now is watch the film and share it with your class, your lab, your department. Awareness is where change begins, and it can start in the next five minutes.</p>
+      </div>
+      <a href="javascript:void(0)" onclick="scrollToSection('film')" class="btn-primary">Watch the Project</a>
+    </div>
+
+    <div class="resources-grid">
+      <div class="resource-card fade-up">
+        <div class="resource-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        </div>
+        <h3>For Students</h3>
+        <p>Experiencing linguistic discrimination at UBC? You are not alone. UBC's Equity & Inclusion Office offers support and reporting pathways for students who have experienced any form of discrimination.</p>
+        <a href="https://equity.ubc.ca" target="_blank" class="resource-link">UBC Equity & Inclusion Office</a>
+      </div>
+      <div class="resource-card fade-up">
+        <div class="resource-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+        </div>
+        <h3>For Educators</h3>
+        <p>The PRISM Framework at UBC Okanagan is developing practical tools for instructors who want to support multilingual learners moving beyond Standard Academic English as a deficit model.</p>
+        <a href="https://fccs.ok.ubc.ca/linguistic-justice/" target="_blank" class="resource-link">PRISM Framework (UBCO)</a>
+      </div>
+      <div class="resource-card fade-up">
+        <div class="resource-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+        </div>
+        <h3>Research & Reading</h3>
+        <p>Explore the growing scholarship on linguistic justice including the 2025 UBC Speaker Series on Plurality, Linguistic Justice, and Decolonization, and work by Dr. Marie-Eve Bouchard (UBC).</p>
+        <a href="https://fccs.ok.ubc.ca/linguistic-justice/2025-speaker-series/" target="_blank" class="resource-link">2025 Speaker Series</a>
+      </div>
+      <div class="resource-card fade-up">
+        <div class="resource-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+        </div>
+        <h3>Indigenous Languages</h3>
+        <p>UBC's First Nations Languages Program offers courses in Indigenous languages. The First Peoples' Cultural Council supports revitalization across British Columbia. Language recovery is an act of justice.</p>
+        <a href="https://fnlg.arts.ubc.ca" target="_blank" class="resource-link">UBC First Nations Languages</a>
+      </div>
+      <div class="resource-card fade-up">
+        <div class="resource-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+        </div>
+        <h3>UBC Student Services</h3>
+        <p>UBC's Centre for Accessibility, Student Health & Wellbeing, and International Student Guide all offer support to students navigating challenges related to language, cultural adjustment, and belonging.</p>
+        <a href="https://students.ubc.ca" target="_blank" class="resource-link">UBC Student Services</a>
+      </div>
+      <div class="resource-card fade-up">
+        <div class="resource-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+        </div>
+        <h3>Contact the Project</h3>
+        <p>Want to bring the film to your class or department? Interested in collaborating on research or advocacy? Get in touch with the project team directly.</p>
+        <a href="mailto:linguisticjustice@ubc.ca" class="resource-link">Email the Project Team</a>
+      </div>
+    </div>
+
+    <!-- INSTRUCTOR GUIDE -->
+    <div class="guide-banner fade-up">
+      <div>
+        <h4>Instructor Discussion Guide</h4>
+        <p>A downloadable guide for using this film and these findings in your classroom with discussion questions, activity suggestions, and further reading for each theme.</p>
+      </div>
+      <a href="#" class="btn-download" onclick="downloadGuide(event)">
+        <svg width="16" height="16" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+        Download Guide
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- PRESS & COVERAGE -->
+<section id="press">
+  <div class="section-inner">
+    <span class="section-label fade-up">Coverage & Recognition</span>
+    <h2 class="section-title fade-up">In the News</h2>
+    <div class="divider fade-up"></div>
+    <p class="section-intro fade-up">
+      As the project develops, coverage, citations, and public engagements will be listed here.
+      If you are writing about this project or would like to be connected with the research team, please get in touch.
+    </p>
+    <div class="press-placeholder fade-up">
+      <div class="press-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10l6 6v8a2 2 0 01-2 2z"/><path d="M17 21v-8H7v8M7 3v5h8"/></svg>
+      </div>
+      <p>Coverage and citations will appear here as the project reaches publication and public audiences.</p>
+      <a href="mailto:linguisticjustice@ubc.ca" class="resource-link" style="margin-top:1rem;display:inline-flex;">Press inquiries</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo-badge">UBC</div>
+      <p>Linguistic Justice Awareness Project<br>Faculty of Arts, University of British Columbia<br>Vancouver, BC</p>
+      <p class="musqueam">UBC is located on the traditional, ancestral, and unceded territory of the xʷməθkʷəy̓əm (Musqueam) people. We are grateful to learn and work on this land.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Sections</h4>
+      <ul>
+        <li><a href="javascript:void(0)" onclick="scrollToSection('what-is')">What Is Linguistic Justice?</a></li>
+        <li><a href="javascript:void(0)" onclick="scrollToSection('glossary')">Glossary</a></li>
+        <li><a href="javascript:void(0)" onclick="scrollToSection('data')">The Data</a></li>
+        <li><a href="javascript:void(0)" onclick="scrollToSection('timeline')">Timeline</a></li>
+        <li><a href="javascript:void(0)" onclick="scrollToSection('stories')">Student Voices</a></li>
+        <li><a href="javascript:void(0)" onclick="scrollToSection('film')">Watch</a></li>
+        <li><a href="javascript:void(0)" onclick="scrollToSection('about')">About the Project</a></li>
+        <li><a href="javascript:void(0)" onclick="scrollToSection('share')">Share Your Story</a></li>
+        <li><a href="javascript:void(0)" onclick="scrollToSection('experiencing')">If You Are Experiencing</a></li>
+      <li><a href="javascript:void(0)" onclick="scrollToSection('you')">Ally Actions</a></li>
+      <li><a href="javascript:void(0)" onclick="scrollToSection('experiencing')">If You Are Experiencing</a>
+    <a href="javascript:void(0)" onclick="scrollToSection('you')">Ally Actions</a>
+    <a href="javascript:void(0)" onclick="scrollToSection('recommendations')">What UBC Can Do</a></li>
+        <li><a href="javascript:void(0)" onclick="scrollToSection('resources')">Resources & Take Action</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Related at UBC</h4>
+      <ul>
+        <li><a href="https://equity.ubc.ca" target="_blank">Equity & Inclusion Office</a></li>
+        <li><a href="https://stear.ubc.ca" target="_blank">StEAR Framework</a></li>
+        <li><a href="https://fccs.ok.ubc.ca/linguistic-justice/" target="_blank">PRISM Framework (UBCO)</a></li>
+        <li><a href="https://fnlg.arts.ubc.ca" target="_blank">First Nations Languages Program</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 University of British Columbia · Linguistic Justice Awareness Project</span>
+    <span>
+      <a href="https://www.ubc.ca/site/legal.html" target="_blank">Terms of Use</a> ·
+      <a href="https://www.ubc.ca/site/copyright.html" target="_blank">Copyright</a> ·
+      <a href="https://www.ubc.ca/accessibility.html" target="_blank">Accessibility</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+
+// ─── SMOOTH SCROLL ───
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const navHeight = document.querySelector('nav').offsetHeight;
+  const landHeight = document.querySelector('.land-banner') ? document.querySelector('.land-banner').offsetHeight : 0;
+  const top = el.getBoundingClientRect().top + window.pageYOffset - navHeight - landHeight - 8;
+  window.scrollTo({ top: top, behavior: 'smooth' });
+  // close mobile nav if open
+  const mobileNav = document.getElementById('mobileNav');
+  if (mobileNav) mobileNav.classList.remove('open');
+}
+
+// ─── TABS ───
+function switchTab(tab, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.data-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  btn.classList.add('active');
+  // trigger bar animations for newly visible tab
+  setTimeout(() => animateBars(), 100);
+}
+
+// ─── MOBILE NAV ───
+function toggleMobileNav() {
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+
+// ─── BAR CHART ANIMATION ───
+function animateBars() {
+  document.querySelectorAll('.tab-panel.active .bar-fill').forEach(bar => {
+    const pct = bar.getAttribute('data-pct');
+    bar.style.width = pct + '%';
+  });
+}
+
+// ─── DONUT ANIMATION ───
+function animateDonuts() {
+  document.querySelectorAll('.donut-arc').forEach(arc => {
+    const pct = parseFloat(arc.getAttribute('data-pct'));
+    const circumference = 238.76;
+    const offset = circumference - (pct / 100) * circumference;
+    arc.style.transition = 'stroke-dashoffset 1.2s cubic-bezier(0.4,0,0.2,1)';
+    arc.style.strokeDashoffset = offset;
+  });
+}
+
+// ─── SCROLL ANIMATIONS ───
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      // Trigger charts if in view
+      if (entry.target.querySelector && entry.target.querySelector('.bar-fill')) {
+        setTimeout(() => animateBars(), 200);
+      }
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Bar chart animation on scroll
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.querySelectorAll('.bar-fill').forEach(bar => {
+          bar.style.width = bar.getAttribute('data-pct') + '%';
+        });
+      }, 200);
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.bar-chart').forEach(el => barObserver.observe(el));
+
+// Donut animation on scroll
+const donutObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      setTimeout(animateDonuts, 300);
+    }
+  });
+}, { threshold: 0.3 });
+
+const donutSection = document.getElementById('donut-ubc');
+if (donutSection) donutObserver.observe(donutSection);
+
+// ─── FORM ───
+function submitForm() {
+  document.getElementById('storyForm').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+}
+
+// ─── DOWNLOAD GUIDE ───
+function downloadGuide(e) {
+  e.preventDefault();
+  window.open('instructor_guide.html', '_blank');
+}
+
+// ─── GLOSSARY ───
+function toggleGlossary(btn) {
+  const item = btn.closest('.glossary-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.glossary-item.open').forEach(el => el.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+</script>
+</body>
+</html>

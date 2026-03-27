@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instructor Discussion Guide — Linguistic Justice at UBC</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Source+Sans+3:wght@300;400;600&display=swap');
+
+  :root {
+    --ubc-blue: #002145;
+    --ubc-gold: #97731B;
+    --ubc-gold-light: #DEBA5E;
+    --ubc-blue-light: #40A5C8;
+    --off-white: #F5F5F0;
+    --light-gray: #E8E8E3;
+    --mid-gray: #767676;
+    --dark-gray: #3D3D3D;
+    --serif: 'Frank Ruhl Libre', Georgia, serif;
+    --sans: 'Source Sans 3', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--sans);
+    color: var(--dark-gray);
+    background: white;
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 3rem 2rem 5rem;
+  }
+
+  /* HEADER */
+  .guide-header {
+    border-top: 6px solid var(--ubc-blue);
+    border-bottom: 2px solid var(--light-gray);
+    padding: 2.5rem 0 2rem;
+    margin-bottom: 3rem;
+  }
+  .ubc-badge {
+    display: inline-block;
+    background: var(--ubc-blue);
+    color: white;
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 12px;
+    padding: 3px 8px;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+  .guide-header h1 {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--ubc-blue);
+    line-height: 1.2;
+    margin-bottom: 0.4rem;
+  }
+  .guide-header .subtitle {
+    font-size: 14px;
+    color: var(--mid-gray);
+    margin-bottom: 1.25rem;
+  }
+  .guide-header .project-url {
+    font-size: 13px;
+    color: var(--ubc-gold);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  /* INTRO BOX */
+  .intro-box {
+    background: var(--off-white);
+    border-left: 4px solid var(--ubc-blue);
+    padding: 1.5rem 2rem;
+    margin-bottom: 3rem;
+    font-size: 14px;
+    color: var(--dark-gray);
+    line-height: 1.8;
+  }
+  .intro-box p { margin-bottom: 0.75rem; }
+  .intro-box p:last-child { margin-bottom: 0; }
+
+  /* SECTION HEADINGS */
+  .guide-section {
+    margin-bottom: 3rem;
+  }
+  .section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ubc-gold);
+    margin-bottom: 0.4rem;
+    display: block;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--ubc-blue);
+    margin-bottom: 0.3rem;
+    border-bottom: 2px solid var(--light-gray);
+    padding-bottom: 0.6rem;
+  }
+  .section-note {
+    font-size: 13px;
+    color: var(--mid-gray);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    margin-top: 0.4rem;
+  }
+
+  /* BEFORE YOU BEGIN */
+  .before-list {
+    list-style: none;
+    margin: 1rem 0;
+  }
+  .before-list li {
+    padding: 0.7rem 0 0.7rem 2rem;
+    border-bottom: 1px solid var(--light-gray);
+    position: relative;
+    font-size: 14px;
+  }
+  .before-list li:last-child { border-bottom: none; }
+  .before-list li::before {
+    content: '•';
+    color: var(--ubc-gold);
+    font-size: 1.2em;
+    position: absolute;
+    left: 0.5rem;
+    top: 0.7rem;
+  }
+
+  /* QUESTIONS */
+  .question-block {
+    margin-bottom: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--off-white);
+  }
+  .question-block .q-num {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ubc-gold);
+    margin-bottom: 0.3rem;
+  }
+  .question-block p {
+    font-size: 15px;
+    color: var(--ubc-blue);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  .question-block .follow-up {
+    margin-top: 0.6rem;
+    font-size: 13px;
+    color: var(--mid-gray);
+    font-style: italic;
+  }
+
+  /* ACTIVITIES */
+  .activity {
+    margin-bottom: 2rem;
+    border-left: 3px solid var(--ubc-blue-light);
+    padding-left: 1.5rem;
+  }
+  .activity h3 {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--ubc-blue);
+    margin-bottom: 0.3rem;
+  }
+  .activity .timing {
+    font-size: 12px;
+    color: var(--ubc-gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.6rem;
+  }
+  .activity p {
+    font-size: 14px;
+    color: var(--dark-gray);
+    line-height: 1.75;
+    margin-bottom: 0.5rem;
+  }
+  .activity .activity-steps {
+    list-style: decimal;
+    padding-left: 1.25rem;
+    font-size: 14px;
+    color: var(--dark-gray);
+    line-height: 1.75;
+  }
+  .activity .activity-steps li { margin-bottom: 0.3rem; }
+
+  /* READING LIST */
+  .reading-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--light-gray);
+    font-size: 14px;
+  }
+  .reading-item:last-child { border-bottom: none; }
+  .reading-item .author { font-weight: 600; color: var(--ubc-blue); }
+  .reading-item .citation { color: var(--dark-gray); line-height: 1.6; }
+  .reading-item .annotation { margin-top: 0.3rem; font-size: 13px; color: var(--mid-gray); font-style: italic; }
+
+  /* KEY STATS BOX */
+  .stats-box {
+    background: var(--ubc-blue);
+    color: white;
+    padding: 2rem;
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .stats-box .stat { text-align: center; }
+  .stats-box .num {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--ubc-gold-light);
+    display: block;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .stats-box .desc { font-size: 12px; color: rgba(255,255,255,0.7); line-height: 1.4; }
+
+  /* FOOTER */
+  .guide-footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--light-gray);
+    font-size: 12px;
+    color: var(--mid-gray);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .guide-footer strong { color: var(--ubc-blue); }
+
+  /* PRINT BUTTON (screen only) */
+  .print-bar {
+    background: var(--off-white);
+    border: 1px solid var(--light-gray);
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--mid-gray);
+  }
+  .btn-print {
+    background: var(--ubc-blue);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .btn-print:hover { background: #0055B7; }
+
+  /* PRINT STYLES */
+  @media print {
+    body { padding: 1rem; font-size: 12px; }
+    .print-bar { display: none; }
+    .guide-header { border-top: 4px solid #002145; }
+    h2 { page-break-after: avoid; }
+    .question-block, .activity { page-break-inside: avoid; }
+    .stats-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<div class="print-bar">
+  <span>Linguistic Justice at UBC — Instructor Discussion Guide</span>
+  <button class="btn-print" onclick="window.print()">Print / Save as PDF</button>
+</div>
+
+<!-- HEADER -->
+<div class="guide-header">
+  <div class="ubc-badge">UBC</div>
+  <h1>Instructor Discussion Guide</h1>
+  <div class="subtitle">Linguistic Justice Awareness Project · UBC Faculty of Arts · 2025</div>
+  <div class="project-url">LinguisticJustice.UBC.ca</div>
+</div>
+
+<!-- INTRO -->
+<div class="intro-box">
+  <p>This guide is designed to accompany the Linguistic Justice Awareness Project at UBC — including the interview documentary and the project website. It is suitable for first-year writing courses, ESL/EAP classes, equity and inclusion workshops, graduate seminars, and student orientation programming.</p>
+  <p>Two versions of the documentary are available: a 3-minute awareness version for time-limited settings, and a 15-minute extended version for sessions with discussion time. Both can be found at LinguisticJustice.UBC.ca.</p>
+  <p>Discussion questions, activities, and readings are organized so you can use as much or as little as fits your context. You do not need to use everything.</p>
+</div>
+
+<!-- KEY STATS -->
+<div class="stats-box">
+  <div class="stat">
+    <span class="num">~60%</span>
+    <div class="desc">of UBCV students speak more than one language at an academic level</div>
+  </div>
+  <div class="stat">
+    <span class="num">28%</span>
+    <div class="desc">of racialized Canadians cite accent as a reason for discrimination</div>
+  </div>
+  <div class="stat">
+    <span class="num">40%</span>
+    <div class="desc">fewer job callbacks for applicants with non-English-sounding names in Canada</div>
+  </div>
+</div>
+
+<!-- BEFORE YOU BEGIN -->
+<div class="guide-section">
+  <span class="section-label">Before You Begin</span>
+  <h2>Preparing for the conversation</h2>
+  <div class="section-note">Take a few minutes before class to hold these questions yourself. You are not required to share your answers aloud, but they will shape how you facilitate.</div>
+  <ul class="before-list">
+    <li>How many students in your class speak English as a first language? How many are operating in English as a second or third language?</li>
+    <li>What assumptions are embedded in your assessment criteria around "clarity," "academic voice," or "standard English"? Whose English do those criteria center?</li>
+    <li>Have you ever asked a student to repeat themselves? What prompted it — genuine confusion, or something else?</li>
+    <li>When you give feedback on student writing or speaking, do you distinguish between clarity and correctness? Should you?</li>
+    <li>What languages are spoken around you in your department, your building, your faculty? Do you know?</li>
+  </ul>
+</div>
+
+<!-- DISCUSSION Q: 3 MIN -->
+<div class="guide-section">
+  <span class="section-label">Discussion Questions</span>
+  <h2>After the 3-minute version</h2>
+  <div class="section-note">These questions work well for a 20–30 minute discussion following the short version of the documentary.</div>
+
+  <div class="question-block">
+    <div class="q-num">Question 1</div>
+    <p>What stayed with you from what you just watched? What surprised you?</p>
+    <div class="follow-up">Follow-up: Was there a moment, a face, or a phrase that you are still thinking about? What was it about that moment?</div>
+  </div>
+
+  <div class="question-block">
+    <div class="q-num">Question 2</div>
+    <p>Has your accent, dialect, or way of speaking ever affected how others responded to you — positively or negatively? You are invited to share, but not required to.</p>
+    <div class="follow-up">Follow-up: If you have not experienced this yourself, have you witnessed it happening to someone else? What did you do?</div>
+  </div>
+
+  <div class="question-block">
+    <div class="q-num">Question 3</div>
+    <p>The project is titled "Your Voice Belongs Here." What would it actually mean for every voice to belong in this classroom — not just be tolerated, but genuinely belong?</p>
+    <div class="follow-up">Follow-up: What is one concrete thing that would need to change in this room for that to be true?</div>
+  </div>
+
+  <div class="question-block">
+    <div class="q-num">Question 4</div>
+    <p>Have you ever adjusted how you speak based on who you were talking to? What did that feel like?</p>
+    <div class="follow-up">Follow-up: Is that adjustment always a choice, or does it sometimes feel compelled? What makes the difference?</div>
+  </div>
+</div>
+
+<!-- DISCUSSION Q: 15 MIN -->
+<div class="guide-section">
+  <span class="section-label">Discussion Questions</span>
+  <h2>After the 15-minute version</h2>
+  <div class="section-note">These questions are designed for a 45–60 minute discussion. They can also be used as written reflection prompts if discussion feels too exposing for some students.</div>
+
+  <div class="question-block">
+    <div class="q-num">Question 1</div>
+    <p>One participant described feeling like "two different people" in two different languages — funny and expressive in Spanish, but guarded and grammatically anxious in English. What do you think they meant? Have you experienced anything similar?</p>
+    <div class="follow-up">Follow-up: What does it cost someone to leave part of themselves at the door when they enter an academic space?</div>
+  </div>
+
+  <div class="question-block">
+    <div class="q-num">Question 2</div>
+    <p>A participant was told by a well-meaning peer to take an "accent reduction class" so that opportunities would come more easily. Why might well-meaning advice still cause harm? What would a genuinely supportive response have looked like?</p>
+    <div class="follow-up">Follow-up: What does this tell us about the difference between individual kindness and structural change?</div>
+  </div>
+
+  <div class="question-block">
+    <div class="q-num">Question 3</div>
+    <p>Several participants described going silent in class — not because they had nothing to say, but because they were afraid of how they would be received. How might this silence be misread by instructors? What are the academic and professional consequences of that misreading?</p>
+    <div class="follow-up">Follow-up: What responsibility do instructors and peers have when they notice a student going quiet?</div>
+  </div>
+
+  <div class="question-block">
+    <div class="q-num">Question 4</div>
+    <p>The data shows that listing multilingual fluency on a resume does not improve job callback rates in Canada — name-based bias operates independently of language skills. What does this tell us about how multilingualism is actually valued in Canadian society versus how it is claimed to be valued?</p>
+    <div class="follow-up">Follow-up: How does this affect how you think about the purpose of a university education?</div>
+  </div>
+
+  <div class="question-block">
+    <div class="q-num">Question 5</div>
+    <p>One participant refused to use a microphone during recorded lectures because they did not want to be captured making a grammar mistake. The institution declined to offer an alternative. Was that the right call? What accommodation would you have offered?</p>
+    <div class="follow-up">Follow-up: What does this example reveal about who institutional policies are designed around?</div>
+  </div>
+
+  <div class="question-block">
+    <div class="q-num">Question 6</div>
+    <p>Strang Burton says "awareness itself is a form of linguistic justice." What do you think he means? Do you agree? Is awareness enough?</p>
+    <div class="follow-up">Follow-up: What comes after awareness? What does action look like at the level of an individual, a classroom, a department, an institution?</div>
+  </div>
+</div>
+
+<!-- ACTIVITIES -->
+<div class="guide-section">
+  <span class="section-label">Classroom Activities</span>
+  <h2>Activities and exercises</h2>
+  <div class="section-note">Activities range from 10 to 30 minutes. They can be used in combination or independently.</div>
+
+  <div class="activity">
+    <div class="timing">Activity 1 · 15–20 minutes</div>
+    <h3>Language Autobiography</h3>
+    <p>Students write a short reflection (one paragraph) responding to: "What languages do you speak, and what role do they play in your life?"</p>
+    <ol class="activity-steps">
+      <li>Give students 8 minutes to write individually, in whatever language feels most natural.</li>
+      <li>Students share in pairs for 5 minutes.</li>
+      <li>Debrief as a full group: What patterns emerged? What surprised you about your partner's experience? What did you learn about the room you are in?</li>
+    </ol>
+    <p>Note: students who speak only one language often find this exercise unexpectedly revealing — they realize they had not thought about their language as a language until now.</p>
+  </div>
+
+  <div class="activity">
+    <div class="timing">Activity 2 · 10 minutes</div>
+    <h3>The Listening Experiment</h3>
+    <p>Play two short audio clips of the same content read in two different accents — one that matches the dominant accent in your context, one that does not.</p>
+    <ol class="activity-steps">
+      <li>After each clip, students write down three words describing their first impression of the speaker.</li>
+      <li>Compare word lists as a group. What patterns appear?</li>
+      <li>Ask: where did these impressions come from? Are they fair? Are they accurate?</li>
+    </ol>
+    <p>This exercise makes accent bias tangible without requiring anyone to disclose personal experience.</p>
+  </div>
+
+  <div class="activity">
+    <div class="timing">Activity 3 · 20–25 minutes</div>
+    <h3>Rewriting the Rubric</h3>
+    <p>Take a standard assignment rubric used in your course and examine it for assumptions about language.</p>
+    <ol class="activity-steps">
+      <li>In small groups, identify any criteria that privilege Standard Academic English as a default — words like "clear," "coherent," "professional," or "appropriate" that may be doing ideological work without naming it.</li>
+      <li>For each criterion identified, ask: what is this criterion actually trying to assess? Can we assess that without defaulting to one form of English?</li>
+      <li>Groups draft alternative language for one criterion and share with the class.</li>
+    </ol>
+    <p>This works best when instructors participate genuinely and are willing to revise their own rubrics in response.</p>
+  </div>
+
+  <div class="activity">
+    <div class="timing">Activity 4 · Homework / 300 words</div>
+    <h3>Data Response</h3>
+    <p>Students choose one statistic from the Linguistic Justice website's Data section and research it further.</p>
+    <p>In 300 words, they answer: What is the context behind this number? Who is affected and how? What would need to change for this number to be different? What would it mean if it were zero?</p>
+    <p>This works well as a bridge between the affective experience of watching the documentary and more analytical academic engagement with the evidence.</p>
+  </div>
+
+  <div class="activity">
+    <div class="timing">Activity 5 · Ongoing</div>
+    <h3>Share Your Story</h3>
+    <p>Encourage students to visit the "Share Your Story" section of LinguisticJustice.UBC.ca and submit their own experiences using the anonymous form.</p>
+    <p>Their submissions contribute to ongoing research that the project team uses to build the evidence base for institutional change. Students who submit are participating in something that extends beyond the classroom.</p>
+  </div>
+</div>
+
+<!-- FURTHER READING -->
+<div class="guide-section">
+  <span class="section-label">Further Reading</span>
+  <h2>Scholarship and resources</h2>
+  <div class="section-note">A starting point, not an exhaustive list. Organized from most accessible to most specialist.</div>
+
+  <div class="reading-item">
+    <div class="author">Bouchard, Marie-Eve (2022)</div>
+    <div class="citation">"Doing linguistics is doing social justice work." UBC Faculty of Arts. arts.ubc.ca</div>
+    <div class="annotation">Accessible and brief. A good starting point for students new to the connection between linguistics and equity.</div>
+  </div>
+
+  <div class="reading-item">
+    <div class="author">Young, Vershawn Ashanti (2009)</div>
+    <div class="citation">"Nah, We Straight": An Argument Against Code Switching. JAC: A Journal of Composition Theory, 29(1/2), 49–76.</div>
+    <div class="annotation">Foundational text on why code-switching places unfair burden on non-dominant speakers. Essential reading for writing instructors.</div>
+  </div>
+
+  <div class="reading-item">
+    <div class="author">Lippi-Green, Rosina (2012)</div>
+    <div class="citation">English with an Accent: Language, Ideology and Discrimination in the United States. Routledge.</div>
+    <div class="annotation">Comprehensive examination of standard language ideology and how it operates in education, employment, and media.</div>
+  </div>
+
+  <div class="reading-item">
+    <div class="author">Alim, H. Samy, Rickford, John R., and Ball, Arnetha F., eds. (2016)</div>
+    <div class="citation">Raciolinguistics: How Language Shapes Our Ideas About Race. Oxford University Press.</div>
+    <div class="annotation">Establishes the field of raciolinguistics. Particularly relevant for understanding accent bias in relation to race.</div>
+  </div>
+
+  <div class="reading-item">
+    <div class="author">Truth and Reconciliation Commission of Canada (2015)</div>
+    <div class="citation">Calls to Action. National Centre for Truth and Reconciliation. nctr.ca</div>
+    <div class="annotation">Calls to Action 13, 14, and 15 specifically address Indigenous language rights. Essential for contextualizing linguistic justice on unceded territory.</div>
+  </div>
+
+  <div class="reading-item">
+    <div class="author">Garcia, Ofelia and Wei, Li (2014)</div>
+    <div class="citation">Translanguaging: Language, Bilingualism and Education. Palgrave Macmillan.</div>
+    <div class="annotation">Foundational text on translanguaging as a pedagogical and theoretical framework. Useful for instructors who want to move from deficit to asset models.</div>
+  </div>
+
+  <div class="reading-item">
+    <div class="author">UBC PRISM Framework (2025)</div>
+    <div class="citation">Plurality, Linguistic Justice, and Decolonization: Addressing Current Issues in Teaching First-year Writing to Multilingual Learners. fccs.ok.ubc.ca/linguistic-justice/</div>
+    <div class="annotation">UBC Okanagan's developing framework for classroom application of linguistic justice principles. Includes practical tools for instructors.</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="guide-footer">
+  <div>
+    <strong>Linguistic Justice Awareness Project</strong><br>
+    Faculty of Arts, University of British Columbia<br>
+    Vancouver, BC — xʷməθkʷəy̓əm (Musqueam) Territory
+  </div>
+  <div style="text-align:right;">
+    <strong>Project Director:</strong> Dr. Moberley Luger<br>
+    <strong>Research &amp; Creative Lead:</strong> Ihomehe R. G. Agbebaku<br>
+    linguisticjustice@ubc.ca
+  </div>
+</div>
+
+</body>
+</html>
